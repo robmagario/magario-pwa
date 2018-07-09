@@ -26,30 +26,15 @@ import Main from './Main';
 import 'typeface-roboto';
 
 
-/*
-const Header = () => (
-    <header>
-        <nav>
-            <ul>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/about'>About</Link></li>
-
-            </ul>
-        </nav>
-    </header>
-);
-*/
-//export default Header;
-
-
 const drawerWidth = 240;
 
 const styles = theme => ({
     root: {
         flexGrow: 1,
+        height:'100%'
     },
     appFrame: {
-        height: 430,
+        height: '100%',
         zIndex: 1,
         overflow: 'hidden',
         position: 'relative',
@@ -96,6 +81,7 @@ const styles = theme => ({
     },
     content: {
         flexGrow: 1,
+        height:'100%',
         backgroundColor: theme.palette.background.default,
         padding: theme.spacing.unit * 3,
         transition: theme.transitions.create('margin', {
@@ -163,16 +149,16 @@ class Header extends React.Component {
                 </div>
                 <Divider />
                 <MenuList>
-                    <Link to='/'>
-                    <MenuItem className={classes.menuItem}>
+                    <Link   to='/'>
+                    <MenuItem className={classes.menuItem} onClick={this.handleDrawerClose}>
                         <ListItemIcon className={classes.icon}>
                             <HomeIcon />
                         </ListItemIcon>
                         <ListItemText classes={{ primary: classes.primary }} inset primary="Home" />
                     </MenuItem>
                     </Link>
-                    <Link to='/about'>
-                    <MenuItem className={classes.menuItem}>
+                    <Link  to='/about'>
+                    <MenuItem className={classes.menuItem} onClick={this.handleDrawerClose}>
                         <ListItemIcon className={classes.icon}>
                             <InfoIcon />
                         </ListItemIcon>
@@ -221,9 +207,16 @@ class Header extends React.Component {
                                 Magario
                             </Typography>
                         </Toolbar>
+
                     </AppBar>
                     {before}
-                    <Main/>
+                    <main
+                        className={classNames(classes.content, classes[`content-${anchor}`], {
+                            [classes.contentShift]: open,
+                            [classes[`contentShift-${anchor}`]]: open,
+                        })}
+                    >
+                        <Main/></main>
                     {after}
                 </div>
             </div>
