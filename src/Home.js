@@ -47,7 +47,7 @@ function Home(props) {
 
     return (
         <MuiThemeProvider theme={theme}>
-        <div className={classes.root} style={{margin:60, backgroundColor:"#f8c443", textAlign:"center"}}>
+        <div className={classes.root} style={{margin:70, backgroundColor:"#f8c443", textAlign:"center"}}>
             <Grid container spacing={24} >
                 <Grid item xs={12} >
 

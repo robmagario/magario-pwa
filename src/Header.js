@@ -211,7 +211,7 @@ class Header extends React.Component {
 
                     </AppBar>
                     {before}
-                    <main style={{ backgroundColor:"#f8c443"}}
+                    <main style={{ backgroundColor:"#f8c443", padding:0}}
                         className={classNames(classes.content, classes[`content-${anchor}`], {
                             [classes.contentShift]: open,
                             [classes[`contentShift-${anchor}`]]: open,
