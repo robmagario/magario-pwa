@@ -15,12 +15,14 @@ const theme = createMuiTheme({
             main: 'primaryGreen',
             dark: 'darkGreen',
             contrastText: '#fff',
+
         },
         secondary: {
             light: 'accentPurple',
             main: 'primaryPurple',
             dark: 'darkPurple',
             contrastText: '#fff',
+
         },
     },
 });
@@ -37,6 +39,7 @@ const styles = theme => ({
         backgroundColor: "#f8c443",
 
     },
+
 });
 
 function Home(props) {
@@ -44,16 +47,16 @@ function Home(props) {
 
     return (
         <MuiThemeProvider theme={theme}>
-        <div className={classes.root} style={{margin:60}}>
-            <Grid container spacing={24}>
-                <Grid item xs={12}>
-                    <Paper className={classes.paper}>
-                    <img src={require('./logo.png')}/>
+        <div className={classes.root} style={{margin:60, backgroundColor:"#f8c443", textAlign:"center"}}>
+            <Grid container spacing={24} >
+                <Grid item xs={12} >
 
-                    <Typography  variant="display3" gutterBottom>
+                    <img src={require('./logo.png')} />
+
+                    <Typography  variant="display3" gutterBottom >
                         Web Design & eMarketing Specialists
                     </Typography>
-                    </Paper>
+
                 </Grid>
 
             </Grid>

@@ -40,6 +40,7 @@ const styles = theme => ({
         position: 'relative',
         display: 'flex',
         width: '100%',
+        backgroundColor:'#f8c443',
     },
     appBar: {
         position: 'absolute',
@@ -210,7 +211,7 @@ class Header extends React.Component {
 
                     </AppBar>
                     {before}
-                    <main
+                    <main style={{ backgroundColor:"#f8c443"}}
                         className={classNames(classes.content, classes[`content-${anchor}`], {
                             [classes.contentShift]: open,
                             [classes[`contentShift-${anchor}`]]: open,
