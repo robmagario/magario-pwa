@@ -9,6 +9,12 @@ import registerServiceWorker from './registerServiceWorker';
 
 const theme = createMuiTheme();
 
+// prevents zooming in
+document.addEventListener('gesturestart', function (e) {
+    e.preventDefault();
+});
+//
+
 
 render((
     <React.Fragment>
