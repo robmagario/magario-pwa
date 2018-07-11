@@ -19,5 +19,6 @@ render((
     </BrowserRouter>
     </MuiThemeProvider>
     </React.Fragment>
-), document.getElementById('root'));
+),
+    document.getElementById('root'));
 registerServiceWorker();

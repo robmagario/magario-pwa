@@ -23,6 +23,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import InfoIcon from '@material-ui/icons/Info';
 import HomeIcon from '@material-ui/icons/Home';
 import Main from './Main';
+import Footer from './Footer';
 import 'typeface-roboto';
 
 
@@ -185,43 +186,42 @@ class Header extends React.Component {
             after = drawer;
         }
 
-        return (
-            <div className={classes.root}>
+        return <div className={classes.root}>
 
-                <div className={classes.appFrame}>
-                    <AppBar
-                        className={classNames(classes.appBar, {
-                            [classes.appBarShift]: open,
-                            [classes[`appBarShift-${anchor}`]]: open,
-                        })}
-                    >
-                        <Toolbar disableGutters={!open}>
-                            <IconButton
-                                color="inherit"
-                                aria-label="open drawer"
-                                onClick={this.handleDrawerOpen}
-                                className={classNames(classes.menuButton, open && classes.hide)}
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography variant="title" color="inherit" noWrap>
-                                Magario
-                            </Typography>
-                        </Toolbar>
+            <div className={classes.appFrame}>
+                <AppBar
+                    className={classNames(classes.appBar, {
+                        [classes.appBarShift]: open,
+                        [classes[`appBarShift-${anchor}`]]: open,
+                    })}
+                >
+                    <Toolbar disableGutters={!open}>
+                        <IconButton
+                            color="inherit"
+                            aria-label="open drawer"
+                            onClick={this.handleDrawerOpen}
+                            className={classNames(classes.menuButton, open && classes.hide)}
+                        >
+                            <MenuIcon/>
+                        </IconButton>
+                        <Typography variant="title" color="inherit" noWrap>
+                            Magario
+                        </Typography>
+                    </Toolbar>
 
-                    </AppBar>
-                    {before}
-                    <main style={{ backgroundColor:"#f8c443", padding:0}}
-                        className={classNames(classes.content, classes[`content-${anchor}`], {
-                            [classes.contentShift]: open,
-                            [classes[`contentShift-${anchor}`]]: open,
-                        })}
-                    >
-                        <Main/></main>
-                    {after}
-                </div>
+                </AppBar>
+                {before}
+                <main style={{backgroundColor: "#f8c443", padding: 0}}
+                      className={classNames(classes.content, classes[`content-${anchor}`], {
+                          [classes.contentShift]: open,
+                          [classes[`contentShift-${anchor}`]]: open,
+                      })}>
+                    <Main/>
+                    <Footer/>
+                </main>
+                {after}
             </div>
-        );
+        </div>;
     }
 }
 
