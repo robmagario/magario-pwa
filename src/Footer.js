@@ -60,9 +60,10 @@ function  Footer(props) {
 
             <MuiThemeProvider theme={theme}>
                 <div className="fab">
-  <span className="fab-action-button">
-        <Info style={{width:'56',height:'56'}}/>
-    </span>
+                    <Button fab variant="fab" color="primary" aria-label="add" className="fab"><Info style={{width:'56',height:'56'}}/>
+                    </Button>
+
+
                     <ul className="fab-buttons">
                         <li className="fab-buttons__item">
                             <a href="https://www.facebook.com/MagarioInternational/" className="fab-buttons__link" data-tooltip="Facebook">

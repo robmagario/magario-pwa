@@ -14,7 +14,7 @@ const theme = createMuiTheme({
             light: 'accentGreen',
             main: 'primaryGreen',
             dark: 'darkGreen',
-            contrastText: '#fff',
+            contrastText: '#000000',
 
         },
         secondary: {
@@ -39,6 +39,11 @@ const styles = theme => ({
         backgroundColor: "#f8c443",
 
     },
+    typography: {
+        fontFamily: 'Alegreya Sans SC',
+        fontSize: '3rem',
+        color: '#605F5F'
+    },
 
 });
 
@@ -53,8 +58,8 @@ function Home(props) {
 
                     <img src={require('./logo.png')} />
 
-                    <Typography  variant="display3" gutterBottom >
-                        Web Design & eMarketing Specialists
+                    <Typography className={classes.typography} variant="display3" gutterBottom >
+                        WE CODE THE FUTURE TODAY
                     </Typography>
 
                 </Grid>

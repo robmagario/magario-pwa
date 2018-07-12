@@ -41,11 +41,12 @@ body {
 }
 
 .fab {
+  margin: 0px;
+  top: auto;
+  right: 20px;
+  bottom: 20px;
   position: fixed;
-  width: 56px;
-  left: 50%;
-  bottom: 15px;
-  margin-left: -28px;
+
 }
 
 .fab:hover .fab-buttons {
@@ -78,7 +79,7 @@ body {
 
 .fab-buttons {
   position: absolute;
-  left: 0;
+
   right: 0;
   bottom: 50px;
   list-style: none;

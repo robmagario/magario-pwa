@@ -167,12 +167,14 @@ class Header extends React.Component {
                         <ListItemText classes={{ primary: classes.primary }} inset primary="About" />
                     </MenuItem>
                     </Link>
+                    <Link  to='/contact'>
                     <MenuItem className={classes.menuItem}>
                         <ListItemIcon className={classes.icon}>
                             <InboxIcon />
                         </ListItemIcon>
-                        <ListItemText classes={{ primary: classes.primary }} inset primary="Inbox" />
+                        <ListItemText classes={{ primary: classes.primary }} inset primary="Contact" />
                     </MenuItem>
+                    </Link>
                 </MenuList>
             </Drawer>
         );
