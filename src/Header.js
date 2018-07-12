@@ -215,7 +215,7 @@ class Header extends React.Component {
                       className={classNames(classes.content, classes[`content-${anchor}`], {
                           [classes.contentShift]: open,
                           [classes[`contentShift-${anchor}`]]: open,
-                      })}>
+                      })} onClick={this.handleDrawerClose}>
                     <Main/>
                     <Footer/>
                 </main>
