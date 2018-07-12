@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+
 import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
@@ -56,7 +55,7 @@ function Home(props) {
             <Grid container spacing={24} >
                 <Grid item xs={12} >
 
-                    <img src={require('./logo.png')} />
+                    <img alt='Magario Logo' src={require('./logo.png')} />
 
                     <Typography className={classes.typography} variant="display3" gutterBottom >
                         WE CODE THE FUTURE TODAY

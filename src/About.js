@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import CssBaseline from '@material-ui/core/CssBaseline';
+import React from "react";
+
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { createMuiTheme } from '@material-ui/core/styles';
+
 
 
 const styles = theme => ({

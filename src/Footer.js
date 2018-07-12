@@ -1,20 +1,13 @@
-import React, { Component } from "react";
-import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import React from "react";
+
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Info from '@material-ui/icons/Info';
-import FastFood from '@material-ui/icons/FastForward';
 import blue from '@material-ui/core/colors/blue';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+
 
 const theme = createMuiTheme({
     palette: {
@@ -54,7 +47,7 @@ const styles = theme => ({
 
 
 function  Footer(props) {
-    const { classes } = props;
+    //const { classes } = props;
     return (
 
 
@@ -71,7 +64,7 @@ function  Footer(props) {
                             </a>
                         </li>
                         <li className="fab-buttons__item">
-                            <a href="#" className="fab-buttons__link" data-tooltip="Twitter">
+                            <a href="https://www.facebook.com/MagarioInternational/" className="fab-buttons__link" data-tooltip="Twitter">
                                 <i className="icon-material icon-material_tw"></i>
                             </a>
                         </li>

@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-
-
-
-import ImageHeader from './bg-header.jpg'; //
 import Header from './Header';
-import Main from './Main';
+
 
 
 const theme = createMuiTheme();
@@ -19,8 +14,6 @@ return(
 
     <div className="content">
                         <Header />
-
-
 
                     </div>
     </MuiThemeProvider>
