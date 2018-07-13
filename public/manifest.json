@@ -1,14 +1,19 @@
 {
   "short_name": "Magario",
-  "name": "Create React App Sample",
+  "name": "Magario",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "start_url": "./", //this needs to be like this so that the home screen will load on the PWA normally
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#ffffff"

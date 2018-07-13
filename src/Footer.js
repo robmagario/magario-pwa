@@ -53,7 +53,7 @@ function  Footer(props) {
 
             <MuiThemeProvider theme={theme}>
                 <div className="fab">
-                    <Button fab variant="fab" color="primary" aria-label="add" className="fab"><Info style={{width:'56',height:'56'}}/>
+                    <Button color="primary" aria-label="add" className="fab"><Info style={{width:'56',height:'56'}}/>
                     </Button>
 
 

@@ -26,5 +26,8 @@ render((
     </MuiThemeProvider>
     </React.Fragment>
 ),
+
     document.getElementById('root'));
+
+
 registerServiceWorker();
