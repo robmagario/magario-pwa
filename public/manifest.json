@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "./", //this needs to be like this so that the home screen will load on the PWA normally
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#ffffff"
