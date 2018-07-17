@@ -27,225 +27,99 @@ import HomeIcon from '@material-ui/icons/Home';
 import Main from './Main';
 import Footer from './Footer';
 import 'typeface-roboto';
+import {createMuiTheme} from "@material-ui/core/styles/index";
+
+const theme = createMuiTheme({
+    palette: {
+        // type: 'dark', // Switching the dark mode on is a single property value change.
+        primary: {
+            light: 'accentGreen',
+            main: 'primaryGreen',
+            dark: 'darkGreen',
+            contrastText: '#000000',
+            background: '#f8c443',
 
 
+        },
+        secondary: {
+            light: 'accentPurple',
+            main: 'primaryPurple',
+            dark: 'darkPurple',
+            contrastText: '#fff',
+            background: '#f8c443',
 
+        },
 
-const drawerWidth = 240;
-
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-        height:'100%'
-    },
-    appFrame: {
-        height: '100%',
-        zIndex: 1,
-        overflow: 'hidden',
-        position: 'relative',
-        display: 'flex',
-        width: '100%',
-        backgroundColor:'#f8c443',
-    },
-    appBar: {
-        position: 'absolute',
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-    },
-    appBarShift: {
-        width: `calc(100% - ${drawerWidth}px)`,
-        transition: theme.transitions.create(['margin', 'width'], {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    'appBarShift-left': {
-        marginLeft: drawerWidth,
-    },
-    'appBarShift-right': {
-        marginRight: drawerWidth,
-    },
-    menuButton: {
-        marginLeft: 12,
-        marginRight: 20,
-    },
-    hide: {
-        display: 'none',
-    },
-    drawerPaper: {
-        position: 'relative',
-        width: drawerWidth,
-    },
-    drawerHeader: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        padding: '0 8px',
-        ...theme.mixins.toolbar,
-    },
-    content: {
-        flexGrow: 1,
-        height:'100%',
-        backgroundColor: theme.palette.background.default,
-        padding: theme.spacing.unit * 3,
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.sharp,
-            duration: theme.transitions.duration.leavingScreen,
-        }),
-    },
-    'content-left': {
-        marginLeft: -drawerWidth,
-    },
-    'content-right': {
-        marginRight: -drawerWidth,
-    },
-    contentShift: {
-        transition: theme.transitions.create('margin', {
-            easing: theme.transitions.easing.easeOut,
-            duration: theme.transitions.duration.enteringScreen,
-        }),
-    },
-    'contentShift-left': {
-        marginLeft: 0,
-    },
-    'contentShift-right': {
-        marginRight: 0,
     },
 });
 
 
+const styles = theme => ({
+    root: {
+        flexGrow: 1,
+        backgroundColor: "#f8c443",
+
+    },
+    paper: {
+        padding: theme.spacing.unit * 2,
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+        backgroundColor: "#f8c443",
+
+    },
+    typography: {
+        fontFamily: 'Alegreya Sans SC',
+        fontSize: '3rem',
+        color: '#605F5F'
+    },
+
+});
+
+
 class App extends Component {
-    state = {
-        open: false,
-        anchor: 'left',
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            inputvalue: "",
 
-    handleDrawerOpen = () => {
-        this.setState({ open: true });
-    };
+        }
+    }
 
-    handleDrawerClose = () => {
-        this.setState({ open: false });
-    };
-
-    handleChangeAnchor = event => {
-        this.setState({
-            anchor: event.target.value,
-        });
-    };
 
     render() {
         const { classes, theme } = this.props;
-        const { anchor, open } = this.state;
+        return (
+            <body style={theme}>
+            <MuiThemeProvider theme={theme}>
+                <div className="menu centered2">
+                    <div>
 
-        const drawer = (
-            <Drawer
-                variant="persistent"
-                anchor={anchor}
-                open={open}
-                classes={{
-                    paper: classes.drawerPaper,
-                }}
-            >
-                <div className={classes.drawerHeader}>
-                    <IconButton onClick={this.handleDrawerClose}>
-                        {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                    </IconButton>
-                </div>
-                <Divider />
-                <MenuList>
-                    <Link   to='/'>
-                        <MenuItem className={classes.menuItem} onClick={this.handleDrawerClose}>
-                            <ListItemIcon className={classes.icon}>
-                                <HomeIcon />
-                            </ListItemIcon>
-                            <ListItemText classes={{ primary: classes.primary }} inset primary="Home" />
-                        </MenuItem>
-                    </Link>
-                    <Link  to='/about'>
-                        <MenuItem className={classes.menuItem} onClick={this.handleDrawerClose}>
-                            <ListItemIcon className={classes.icon}>
-                                <InfoIcon />
-                            </ListItemIcon>
-                            <ListItemText classes={{ primary: classes.primary }} inset primary="About" />
-                        </MenuItem>
-                    </Link>
-                    <Link  to='/contact'>
-                        <MenuItem className={classes.menuItem}>
-                            <ListItemIcon className={classes.icon}>
-                                <InboxIcon />
-                            </ListItemIcon>
-                            <ListItemText classes={{ primary: classes.primary }} inset primary="Contact" />
-                        </MenuItem>
-                    </Link>
-                </MenuList>
-            </Drawer>
-        );
-
-        let before = null;
-        let after = null;
-
-        if (anchor === 'left') {
-            before = drawer;
-        } else {
-            after = drawer;
-        }
-
-        return(
-    <MuiThemeProvider theme={theme}>
-
-    <div className="content">
-        <div className={classes.root}>
-
-            <div className={classes.appFrame}>
-                <AppBar
-                    className={classNames(classes.appBar, {
-                        [classes.appBarShift]: open,
-                        [classes[`appBarShift-${anchor}`]]: open,
-                    })}
-                >
-                    <Toolbar disableGutters={!open}>
-                        <IconButton
-                            color="inherit"
-                            aria-label="open drawer"
-                            onClick={this.handleDrawerOpen}
-                            className={classNames(classes.menuButton, open && classes.hide)}
-                        >
-                            <MenuIcon/>
-                        </IconButton>
-                        <Typography variant="title" color="inherit" noWrap>
-                            Magario
-                        </Typography>
-                    </Toolbar>
-
-                </AppBar>
-                {before}
-                <main style={{backgroundColor: "#f8c443", padding: 0}}
-                      className={classNames(classes.content, classes[`content-${anchor}`], {
-                          [classes.contentShift]: open,
-                          [classes[`contentShift-${anchor}`]]: open,
-                      })} onClick={this.handleDrawerClose}>
-                    <Main/>
-                    <Footer/>
-                </main>
-                {after}
-            </div>
-        </div>
+                        <img alt='Magario Logo' src={require('./logo.png')} style={{width: '10vw'}}/>
 
                     </div>
-    </MuiThemeProvider>
-
-);
-
-
+                    <div>
+                        <nav className="menu-navigation-round">
+                            <a href="/" className="selected">Home</a>
+                            <a href="#">Products</a>
+                            <a href="#">Services</a>
+                            <a href="/contact">Reach us</a>
+                            <a href="/about">About</a>
+                        </nav>
+                    </div>
+                </div>
+                <Main/>
+                <Footer/>
+            </MuiThemeProvider>
+            </body>
+        );
     }
+
 }
 
-App.propTypes = {
+
+    App.propTypes = {
     classes: PropTypes.object.isRequired,
-    theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(App);
+    export default withStyles(styles)(App);
+
