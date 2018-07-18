@@ -108,7 +108,7 @@ class Home extends React.Component {
                         <h2 id="subtext">WE DEVELOP NATIVE MOBILE APPLICATIONS AND PROGRESSIVE WEB APPLICATIONS</h2>
                     </div>
                 </div>
-                <div className="centered">
+                <div className="centered" style={{marginLeft:"0"}}>
                     <ul>
                         <li id="pg1but">
                             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"

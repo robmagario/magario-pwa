@@ -272,6 +272,10 @@ ul{
   .menu {
     align-items: unset;
   }
+  ul{
+    margin-top:75vw;
+    padding-left: 0px;
+  }
 
   .magario-logo {
     width: 5em;
@@ -287,7 +291,7 @@ ul{
 }
 
 .menu-navigation-round a {
-  margin: 12px ;
+  margin: 8px ;
   padding: 0 0 0.2em 0;
   line-height: 1.1em;
   text-align: center;
