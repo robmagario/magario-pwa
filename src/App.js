@@ -19,7 +19,7 @@ class App extends Component {
                 <div className="menu centered2" >
                     <div>
 
-                        <img alt='Magario Logo' src={require('./logo.png')} style={{width: '10vw'}}/>
+                        <img alt='Magario Logo' src={require('./logo.png')} className="magario-logo"/>
 
                     </div>
                     <div>

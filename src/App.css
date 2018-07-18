@@ -195,7 +195,7 @@ body {
 
   position: fixed;
   top: 60px;
-  left:10%;
+  left: 10%;
   /* bring your own prefixes */
   transform: translate(, -50%);
 }
@@ -222,7 +222,7 @@ ul{
 
 .menu{
   display:grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 22% auto;
   width:100%;
   align-items:center;
 }
@@ -242,6 +242,10 @@ ul{
   white-space: nowrap;
 }
 
+.magario-logo {
+  width: 10vw;
+}
+
 .menu-navigation-round a.selected {
   color: #ffffff;
   background-color: #9eb9cc;
@@ -253,4 +257,40 @@ ul{
 /* Making the navigation menu responsive */
 
 
+@media screen and (max-width: 780px) {
+  .menu li {
+    width: 10%;
+    padding: 1%;
+    margin: 0;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #333;
+  }
+  .centered2 {
 
+    position: unset;
+  }
+  .menu {
+    align-items: unset;
+  }
+
+  .magario-logo {
+    width: 5em;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+.menu li:first-child {
+  border-left: none;
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+.menu-navigation-round a {
+  margin: 12px ;
+  padding: 0 0 0.2em 0;
+  line-height: 1.1em;
+  text-align: center;
+  height: 3.8em;
+}
+}
