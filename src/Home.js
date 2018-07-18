@@ -53,13 +53,13 @@ class Home extends React.Component {
     componentDidMount(){
 
         $('#pg1but').click(function () {
-            TweenMax.to($('.root'),0.3,{backgroundColor:'#FEC200',ease:Power2.easeIn});
+            TweenMax.to($('body'),0.3,{backgroundColor:'#FEC200',ease:Power2.easeIn});
             TweenMax.to($('.menu2'),0,{display:'none',opacity:0});
             TweenMax.fromTo($('.menu1'),1,{rotation:'+=10'},{display:'inline-block',opacity:1,rotation:0});
             TweenMax.to($('.menu3'),0,{display:'none',opacity:0});
         });
         $('#pg2but').click(function () {
-            TweenMax.to($('.root'),0.3,{backgroundColor:'#e9a1b9',ease:Power2.easeIn});
+            TweenMax.to($('body'),0.3,{backgroundColor:'#e9a1b9',ease:Power2.easeIn});
             TweenMax.to($('.menu1'),0,{display:'none',opacity:0});
             TweenMax.fromTo($('.menu2'),1,{rotation:'+=10'},{display:'inline-block',opacity:1,rotation:0});
             TweenMax.to($('.menu3'),0,{display:'none',opacity:0});
@@ -67,7 +67,7 @@ class Home extends React.Component {
 
         });
         $('#pg3but').click(function () {
-            TweenMax.to($('.root'),0.3,{backgroundColor:'#323232',ease:Power2.easeIn});
+            TweenMax.to($('body'),0.3,{backgroundColor:'#323232',ease:Power2.easeIn});
             TweenMax.to($('.menu1'),0,{display:'none',opacity:0});
             TweenMax.fromTo($('.menu3'),1.5,{rotation:'+=10'},{display:'inline-block',opacity:1,rotation:0});
             TweenMax.to($('.menu2'),0,{display:'none',opacity:0});
