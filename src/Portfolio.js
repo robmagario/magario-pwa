@@ -2,7 +2,7 @@ import React from "react";
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import './teamstyles.css';
+//import './teamstyles.css';
 import * as $ from 'jquery';
 import {TweenMax, Power2, Elastic} from "gsap";
 
