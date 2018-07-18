@@ -333,4 +333,8 @@ ul{
   height: 3.8em;
   font-size:0.8em;
 }
+    .grid-container img{
+        width:30vw;
+        height:30vw;
+    }
 }
