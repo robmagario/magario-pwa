@@ -1,12 +1,6 @@
 import React from "react";
-import Typography from '@material-ui/core/Typography';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-
 import * as $ from 'jquery';
 import {TweenMax, Power2, Elastic} from "gsap";
-
-import Grid from '@material-ui/core/Grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -29,25 +23,6 @@ const theme = createMuiTheme({
     },
 });
 
-
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        backgroundColor: "#f8c443",
-
-    },
-    typography: {
-        fontFamily: 'Alegreya Sans SC',
-        fontSize: '3rem',
-        color: '#605F5F'
-    },
-
-});
 
 class Home extends React.Component {
     componentDidMount(){
