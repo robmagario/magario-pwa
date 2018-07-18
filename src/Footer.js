@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Info from '@material-ui/icons/Info';
+import PermMedia from '@material-ui/icons/PermMedia';
 import blue from '@material-ui/core/colors/blue';
 
 
@@ -64,8 +65,8 @@ function  Footer(props) {
                             </a>
                         </li>
                         <li className="fab-buttons__item">
-                            <a href="https://www.facebook.com/MagarioInternational/" className="fab-buttons__link" data-tooltip="Twitter">
-                                <i className="icon-material icon-material_tw"></i>
+                            <a href="/portfolio" className="fab-buttons__link" data-tooltip="Portfolio">
+                                <i ><PermMedia style={{width:'20',height:'20',marginTop:'10'}}/></i>
                             </a>
                         </li>
 
