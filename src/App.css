@@ -279,8 +279,8 @@ ul{
 
   .magario-logo {
     width: 5em;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
   }
 .menu li:first-child {
   border-left: none;
@@ -290,11 +290,17 @@ ul{
   border-right: none;
 }
 
+.menu-navigation-round{
+  margin-top:50px;
+  margin-left:25px;
+}
 .menu-navigation-round a {
+
   margin: 8px ;
   padding: 0 0 0.2em 0;
   line-height: 1.1em;
   text-align: center;
   height: 3.8em;
+  font-size:0.8em;
 }
 }
