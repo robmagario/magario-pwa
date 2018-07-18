@@ -58,16 +58,16 @@ class Portfolio extends React.Component {
         }
         );
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-            TweenMax.to($(".grid-container"),1,{display:"inline-grid"});
+            TweenMax.to($(".grid-container32"),1,{display:"inline-grid"});
 
             $(".detailgriditem2").css("width","70vw");
-            TweenMax.staggerFrom($(".grid-item"), 5, {scale:0.5, opacity:0, ease:Elastic.easeOut, force3D:true}, 0.5);
+            TweenMax.staggerFrom($(".grid-item3"), 5, {scale:0.5, opacity:0, ease:Elastic.easeOut, force3D:true}, 0.5);
 
         }
         if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
-            TweenMax.to($(".grid-container"),1,{display:"inline-grid"});
-            TweenMax.staggerFrom($(".grid-item"), 5, {scale:0.5, opacity:0, ease:Elastic.easeOut, display:"none", force3D:true}, 0.5);
+            TweenMax.to($(".grid-container32"),1,{display:"inline-grid"});
+            TweenMax.staggerFrom($(".grid-item3"), 5, {scale:0.5, opacity:0, ease:Elastic.easeOut, display:"none", force3D:true}, 0.5);
         }
 
     }
@@ -75,27 +75,27 @@ class Portfolio extends React.Component {
     render(){
         return (
             <MuiThemeProvider theme={theme}>
-                <div className="centered" style={{position:"absolute"}}>
+                <div className="centered3" style={{position:"absolute"}}>
                     <h1 id="titleText2" style={{display:"none"}}>PORTFOLIO</h1>
                 </div>
 
-                <div className="grid-container" style={{marginTop:"5vw",display:"none"}}>
-                    <div className="grid-item">
+                <div className="grid-container32" style={{marginTop:"5vw",display:"none"}}>
+                    <div className="grid-item3">
                         <div><img src={require('./portfolio/1.jpg')} /></div>
                     </div>
-                    <div className="grid-item">
+                    <div className="grid-item3">
                         <div><img src={require('./portfolio/2.jpg')} /></div>
                     </div>
-                    <div className="grid-item">
+                    <div className="grid-item3">
                         <div><img src={require('./portfolio/3.jpg')} /></div>
                     </div>
-                    <div className="grid-item">
+                    <div className="grid-item3">
                         <div><img src={require('./portfolio/4.jpg')} /></div>
                     </div>
-                    <div className="grid-item">
+                    <div className="grid-item3">
                         <div><img src={require('./portfolio/5.jpg')} /></div>
                     </div>
-                    <div className="grid-item">
+                    <div className="grid-item3">
                         <div><img src={require('./portfolio/6.jpg')} /></div>
                     </div>
 

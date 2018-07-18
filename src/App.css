@@ -182,7 +182,7 @@ body {
 .root{
   background-color: #FEC200;
 }
-.centered {
+.centered3 {
 
   position: fixed;
   top: 50%;
@@ -191,7 +191,7 @@ body {
   transform: translate(-50%, -50%);
   display: inline-block;
 }
-.centered2{
+.centered32{
 
   position: fixed;
   top: 60px;
@@ -265,7 +265,7 @@ ul{
     border-left: 1px solid #fff;
     border-right: 1px solid #333;
   }
-  .centered2 {
+  .centered32 {
 
     position: unset;
   }

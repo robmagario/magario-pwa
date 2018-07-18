@@ -16,7 +16,7 @@ class App extends Component {
         return (
             <body>
 
-                <div className="menu centered2" >
+                <div className="menu centered32" >
                     <div>
 
                         <img alt='Magario Logo' src={require('./logo.png')} className="magario-logo"/>
@@ -25,7 +25,7 @@ class App extends Component {
                     <div>
                         <nav className="menu-navigation-round">
                             <a href="/" className="selected">Home</a>
-                            <a href="#">Services</a>
+                            <a href="/services">Services</a>
                             <a href="/contact">Reach us</a>
                             <a href="/about">About</a>
                         </nav>

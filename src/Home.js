@@ -48,20 +48,20 @@ class Home extends React.Component {
             TweenMax.to($('.menu2'),0,{display:'none',opacity:0});
         });
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-            TweenMax.to($(".grid-container"),1,{display:"inline-grid",delay:1});
+            TweenMax.to($(".grid-container32"),1,{display:"inline-grid",delay:1});
 
             TweenMax.fromTo($('#titleText2'),1,{y:"+=200",opacity:0},{y:0,opacity:1});
             TweenMax.to($("#titleText2"),1,{fontSize:"-=20",y:"-=810",delay:1});
             $(".detailgriditem2").css("width","70vw");
-            TweenMax.staggerFrom($(".grid-item"), 5, {scale:0.5, opacity:0, delay:1.8, ease:Elastic.easeOut, force3D:true}, 0.5);
+            TweenMax.staggerFrom($(".grid-item3"), 5, {scale:0.5, opacity:0, delay:1.8, ease:Elastic.easeOut, force3D:true}, 0.5);
 
         }
         if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
             TweenMax.fromTo($('#titleText2'),1,{y:"+=200",opacity:0},{y:0,opacity:1,display:"block"});
             TweenMax.to($("#titleText2"),1,{fontSize:"-=70",y:"-=250",delay:1});
 
-            TweenMax.to($(".grid-container"),1,{display:"inline-grid",delay:1});
-            TweenMax.staggerFrom($(".grid-item"), 5, {scale:0.5, opacity:0, delay:1.8, ease:Elastic.easeOut, display:"none", force3D:true}, 0.5);
+            TweenMax.to($(".grid-container32"),1,{display:"inline-grid",delay:1});
+            TweenMax.staggerFrom($(".grid-item3"), 5, {scale:0.5, opacity:0, delay:1.8, ease:Elastic.easeOut, display:"none", force3D:true}, 0.5);
         }
 
     }
@@ -69,7 +69,7 @@ class Home extends React.Component {
     render(){
         return (
             <MuiThemeProvider theme={theme}>
-                <div className="centered" align="center" style={{display: "inline-block"}}>
+                <div className="centered3" align="center" style={{display: "inline-block"}}>
                     <div className="menu1">
                         <h1 id="titleText">WEBSITES</h1>
                         <h2 id="subtext">WEB DESIGN AND E-MARKETING SPECIALISTS</h2>
@@ -83,7 +83,7 @@ class Home extends React.Component {
                         <h2 id="subtext">WE DEVELOP NATIVE MOBILE APPS AND PROGRESSIVE WEB APPS</h2>
                     </div>
                 </div>
-                <div className="centered" style={{marginLeft:"0"}}>
+                <div className="centered3" style={{marginLeft:"0"}}>
                     <ul>
                         <li id="pg1but">
                             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"

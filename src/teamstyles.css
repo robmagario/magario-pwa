@@ -22,12 +22,12 @@
 
 }
 
-.grid-container{
+.grid-container32{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     display:inline-grid;
     grid-template-columns: auto auto auto ;
     grid-column-gap: 5vw;
@@ -39,7 +39,7 @@
     grid-template-rows: auto auto auto;
 
 }
-.grid-container img{
+.grid-container32 img{
     width:15vw;
     height:15vw;
 }

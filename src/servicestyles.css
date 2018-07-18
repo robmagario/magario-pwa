@@ -1,0 +1,71 @@
+
+.centered3{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+.grid-container3{
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    height:100%;
+    margin-left:20%;
+    margin-top:20%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align:center;
+}
+
+.twrap{
+    background-color:black;
+    color:white;
+    width:90%;
+    margin-left:3%;
+    opacity:0;
+}
+.icons{
+    opacity:0;
+}
+.phoneico{
+    opacity:0
+}
+.cam{
+    transform-origin: center;
+    opacity:0
+}
+
+.cam1{
+    transform-origin: center;
+    opacity:0
+}
+.grid-item3{
+    height:100%;
+
+}
+.info{
+    vertical-align: middle;
+    height:100%;
+    padding:0% 10%;
+    opacity:0;
+    text-align: center;
+
+}
+.info h3{
+    padding:1% 2%;
+    opacity:0;
+    background-color:black;
+    color:white;
+
+}
+#close{
+    display:block;
+    float:right;
+    width:30px;
+    height:29px;
+    background:url(https://web.archive.org/web/20110126035650/http://digitalsbykobke.com/images/close.png) no-repeat center center;
+}
