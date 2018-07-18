@@ -105,7 +105,7 @@ class Home extends React.Component {
                     </div>
                     <div className="menu3" style={{display: "none", opacity:0}}>
                         <h1 id="titleText">MOBILE</h1>
-                        <h2 id="subtext">WE DEVELOP NATIVE MOBILE APPLICATIONS AND PROGRESSIVE WEB APPLICATIONS</h2>
+                        <h2 id="subtext">WE DEVELOP NATIVE MOBILE APPS AND PROGRESSIVE WEB APPS</h2>
                     </div>
                 </div>
                 <div className="centered" style={{marginLeft:"0"}}>
