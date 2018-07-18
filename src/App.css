@@ -194,7 +194,7 @@ body {
 .centered2{
 
   position: fixed;
-
+  top: 60px;
   left:10%;
   /* bring your own prefixes */
   transform: translate(, -50%);
@@ -252,37 +252,5 @@ ul{
 
 /* Making the navigation menu responsive */
 
-.slicknav_menu {
-  display:none;
-}
-
-@media (max-width: 600px) {
-  .menu-navigation-round{
-    display:none;
-  }
-
-  .slicknav_menu {
-    display:block;
-  }
-}
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) {
-  .menu-navigation-round{
-    margin-right:15%;
-  }
-  .logo{
-    margin-top:10%;
-  }
-}
-@media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px)
-and (-webkit-min-device-pixel-ratio: 2)
-and (orientation: portrait) {
-
-}
 
 
