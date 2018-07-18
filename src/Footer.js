@@ -65,7 +65,7 @@ function  Footer(props) {
                             </a>
                         </li>
                         <li className="fab-buttons__item">
-                            <a href="/src/portfolio" className="fab-buttons__link" data-tooltip="Portfolio">
+                            <a href="/portfolio" className="fab-buttons__link" data-tooltip="Portfolio">
                                 <i ><PermMedia style={{width:'20',height:'20',marginTop:'10'}}/></i>
                             </a>
                         </li>
