@@ -1,0 +1,145 @@
+body{
+    background-color: #323232;
+    font-family: 'Ubuntu', sans-serif;
+
+    color:#61605e;
+}
+#root{
+    margin-top:-3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
+
+}
+.logo{
+    margin-left:200%;
+}
+
+#titleText2{
+    font-weight: 900;
+    font-size: 10vw;
+
+    line-height:0.00001em;
+
+}
+
+.grid-container{
+    display:inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 5vw;
+
+
+}
+.detailgrid{
+    display:inline-grid;
+    grid-template-rows: auto auto auto;
+
+}
+img{
+    height:13vw;
+    width:13vw;
+
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+    #titleText2 {
+        margin-top:-25%;
+        font-size: 15vw;}
+    .grid-container{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        margin-top:20%;
+    }
+    .grid-item{
+        margin-top:10%;
+    }
+
+
+
+        .detailgriditem2{
+            font-size:3vw;
+        }
+    }
+
+
+.detailgriditem2{
+    background-color:#9D9C9B;
+    width:16vw;
+}
+
+.menu{
+    display:grid;
+    grid-template-columns: 10% 90%;
+    width:100%;
+    align-items:center;
+}
+.menu-navigation-round {
+    font:bold 12px Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    margin-left:20%;
+}
+
+.menu-navigation-round a {
+    color: #748c99;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin: 0 20px auto;
+    line-height: 2;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu-navigation-round a.selected {
+    color: #ffffff;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 0 5px auto;
+}
+
+/* Making the navigation menu responsive */
+
+.slicknav_menu {
+    display:none;
+}
+
+@media (max-width: 600px) {
+    .menu-navigation-round{
+        display:none;
+    }
+
+    .slicknav_menu {
+        display:block;
+    }
+}
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+    .menu-navigation-round{
+        margin-top:6%;
+        margin-right:10%;
+    }
+    .logo{
+        padding-top:50%;
+        margin-left:200%;
+    }
+}
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+}
