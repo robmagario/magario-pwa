@@ -47,39 +47,56 @@ const styles = theme => ({
 
 });
 
-
-function  Footer(props) {
-    const { classes } = props;
-    return (
-
-
-
-                <div className="fab">
-                    <Button elevation={2} color="primary" aria-label="add" className="classes.fab"><Info style={{backgroundColor: 'white',
-                        borderRadius: '50%', width:'40', height:'40',}}/>
-                    </Button>
-
-
-                    <ul className="fab-buttons">
-                        <li className="fab-buttons__item">
-                            <a href="https://www.facebook.com/MagarioInternational/" className="fab-buttons__link" data-tooltip="Facebook">
-                                <i className="icon-material icon-material_fb"></i>
-                            </a>
-                        </li>
-                        <li className="fab-buttons__item">
-                            <a href="/portfolio" className="fab-buttons__link" data-tooltip="Portfolio">
-                                <i ><PermMedia style={{width:'20',height:'20',marginTop:'10'}}/></i>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
+class Footer extends React.Component {
+    constructor () {
+        super()
+        this.state = {
+            isHidden: true
+        }
+    }
+    toggleHidden () {
+        this.setState({
+            isHidden: !this.state.isHidden
+        })
+    }
+    render() {
+        const { classes, theme } = this.props;
+        return (
 
 
+            <div className="fab">
+                <Button onClick={this.toggleHidden.bind(this)} elevation={2} color="primary" aria-label="add"
+                        className="classes.fab"><Info style={{
+                    backgroundColor: 'white',
+                    borderRadius: '50%', width: '40', height: '40',
+                }}/>
+                </Button>
+                {!this.state.isHidden && <Child />}
 
-);
+            </div>
 
+
+        );
+
+    }
 }
+const Child = () => (
+    <ul className="fab-buttons">
+        <li className="fab-buttons__item">
+            <a href="https://www.facebook.com/MagarioInternational/" className="fab-buttons__link"
+               data-tooltip="Facebook">
+                <i className="icon-material icon-material_fb"></i>
+            </a>
+        </li>
+        <li className="fab-buttons__item">
+            <a href="/portfolio" className="fab-buttons__link" data-tooltip="Portfolio">
+                <i><PermMedia style={{width: '20', height: '20', marginTop: '10'}}/></i>
+            </a>
+        </li>
+
+    </ul>
+)
+
 Footer.propTypes = {
     classes: PropTypes.object.isRequired,
 };

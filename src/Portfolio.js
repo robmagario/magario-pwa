@@ -83,8 +83,8 @@ class Portfolio extends React.Component {
                             <div className="legend"></div>
                             <div className="content">
                                 <div className="content-txt">
-                                    <h1> Your title </h1>
-                                    <h2> Your description </h2>
+                                    <h1>Andy Willner</h1>
+                                    <h2>Magario assisted me with social media promotion for my yoga business. Thanks a lot. </h2>
                                 </div>
                             </div>
                             <div className="images">
@@ -110,8 +110,8 @@ class Portfolio extends React.Component {
                             <div className="legend"></div>
                             <div className="content">
                                 <div className="content-txt">
-                                    <h1> Your title </h1>
-                                    <h2> Your description </h2>
+                                    <h1>Javed Rasool</h1>
+                                    <h2>During this time we have seen significant improvement in our organic rankings including a move from the 10th page to the 1st page position for our primary target “salsa classes hong kong”.</h2>
                                 </div>
                             </div>
                             <div className="images">
