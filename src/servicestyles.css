@@ -73,7 +73,10 @@
 .swiper{
     display:none
 }
-@media screen and (max-width: 780px) {
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
 
     .centered5{
         display:none;

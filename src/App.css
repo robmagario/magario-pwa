@@ -237,6 +237,7 @@ ul{
   width:100%;
   align-items:center;
     z-index:3;
+  position:fixed;
 }
 .menu-navigation-round {
   font:bold 12px Arial, Helvetica, sans-serif;
@@ -321,7 +322,10 @@ ul{
 
 /* Mobile View */
 
-@media screen and (max-width: 780px) {
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
   .menu li {
     width: 10%;
     padding: 1%;
