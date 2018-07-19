@@ -55,7 +55,7 @@ class About extends React.Component {
     return (
         <div className="centered3" align="center" style={{margin:60, display: "inline-block"}}>
             <Grid container spacing={24}>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={3}>
             <Card className={classes.card}>
                 <CardMedia
                     className={classes.media}
@@ -80,7 +80,7 @@ class About extends React.Component {
                 </CardActions>
             </Card>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={3}>
             <Card className={classes.card}>
                 <CardMedia
                     className={classes.media}
@@ -105,7 +105,7 @@ class About extends React.Component {
                 </CardActions>
             </Card>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={3}>
             <Card className={classes.card}>
                 <CardMedia
                     className={classes.media}
@@ -130,7 +130,7 @@ class About extends React.Component {
                 </CardActions>
             </Card>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={12} sm={3}>
 
             <Card className={classes.card}>
                 <CardMedia

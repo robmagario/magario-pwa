@@ -27,7 +27,7 @@ class App extends Component {
                         <nav className="menu-navigation-round">
                             <a href="/" className="selected">Home</a>
                             <a href="/services">Services</a>
-                            <a href="/contact">Reach us</a>
+                            <a href="/contact">Contact</a>
                             <a href="/about">About</a>
                         </nav>
                     </div>
