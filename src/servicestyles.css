@@ -73,6 +73,7 @@
 .swiper{
     display:none
 }
+
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 568px)
@@ -81,10 +82,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
         display:none;
     }
     .swiper{
+        transform:scale(0.9);
         position:fixed;
         display:block;
-        margin-left:-70%;
-        margin-top:-60%;
+        margin-left:-90%;
+        margin-top:-75%;
     }
 }
 
