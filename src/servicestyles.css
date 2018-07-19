@@ -1,5 +1,5 @@
 
-.centered3{
+.centered5{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -75,7 +75,7 @@
 }
 @media screen and (max-width: 780px) {
 
-    .centered3{
+    .centered5{
         display:none;
     }
     .swiper{
