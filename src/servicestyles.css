@@ -11,10 +11,10 @@
     box-sizing: border-box;
 
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33% 40% 33%;
     height:100%;
-    margin-left:20%;
-    margin-top:20%;
+    grid-column-gap: 4vw;
+    margin-top:30%;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -44,6 +44,7 @@
     opacity:0
 }
 .grid-item3{
+    text-align:center;
     height:100%;
 
 }
@@ -68,4 +69,18 @@
     width:30px;
     height:29px;
     background:url(https://web.archive.org/web/20110126035650/http://digitalsbykobke.com/images/close.png) no-repeat center center;
+}
+.swiper{
+    display:none
+}
+@media screen and (max-width: 780px) {
+
+    .centered3{
+        display:none;
+    }
+    .swiper{
+        display:block;
+        margin-left:-58%;
+        margin-top:10%
+    }
 }

@@ -69,7 +69,7 @@ class Home extends React.Component {
     render(){
         return (
             <MuiThemeProvider theme={theme}>
-                <div className="centered3" align="center" style={{display: "inline-block"}}>
+                <div className="centered4" align="center" style={{display: "inline-block"}}>
                     <div className="menu1">
                         <h1 id="titleText">WEBSITES</h1>
                         <h2 id="subtext">WEB DESIGN AND E-MARKETING SPECIALISTS</h2>
@@ -83,7 +83,7 @@ class Home extends React.Component {
                         <h2 id="subtext">WE DEVELOP NATIVE MOBILE APPS AND PROGRESSIVE WEB APPS</h2>
                     </div>
                 </div>
-                <div className="centered3" style={{marginLeft:"0"}}>
+                <div className="centered4" style={{marginLeft:"0"}}>
                     <ul>
                         <li id="pg1but">
                             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"

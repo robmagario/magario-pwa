@@ -1,4 +1,5 @@
 import React from "react";
+import SwipeableViews from 'react-swipeable-views';
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -119,25 +120,35 @@ class Services extends React.Component {
             $("#mediaitem").css("background-color","transparent");
 
 
-            $(".grid-container3").css("grid-template-columns","auto auto auto");
+            $(".grid-container3").css("grid-template-columns","33% 40% 33%");
+            $(".grid-container3").css("grid-column-gap","4vw");
+            $(".grid-container3").css("margin-top","30%");
             $("#phoneitem").css("display","block");
-            $("#mailitem").css("display","block")
+            $("#mailitem").css("display","block");
             $("#mediaitem").css("display","block");
+
             TweenMax.staggerTo($(".grid-item3"),0.5,{y:"+=200",opacity:1,ease:Power3.easeIn},0.3);
+
+
         }
         function mailpage(){
             $("#phoneitem").css("display","none");
             $("#mediaitem").css("display","none");
             $(".grid-container3").css("grid-template-columns","auto auto");
+            $(".grid-container3").css("grid-column-gap","0vw");
             $(".grid-container3").append("<div class='info'><a id='close'></a><h1 style='text-align: center;'><hr style='margin-left:10%;margin-top:15%'></h1><h3>Unlimited Promotions\n</h3><h3>Reviewed by Native English Speakers</h3><h3>Text and Image Content</h3><h3>Top Rankings for Google & Facebook</h3><h3>Ads for Desktop & Mobile</h3><h3>Newsletter Support</h3><h1>30%/project</h1><hr style='margin-left:10%'></div>")
             $("#mailitem").css("background-color","#F3C8D7");
             $(".info").css("background-color","#F3C8D7");
+            TweenMax.to($(".grid-item3"),0.1,{scale:0.95});
+            TweenMax.to($(".info"),0.1,{scale:0.95});
             TweenMax.to($("#mailitem"),0.3,{opacity:1,y:"+=200"});
             TweenMax.to($(".info"),0.1,{x:"-=10"});
             TweenMax.to($(".info"),0.1,{y:"-=100"});
             TweenMax.to($(".info"),0.1,{y:"+=100",opacity:1,delay:0.2});
             TweenMax.staggerTo($(".info h3"),0.3,{delay:0.2,opacity:1,x:"+=10"},0.2);
             $("#close").click(function(){
+                TweenMax.to($(".grid-item3"),0.1,{scale:1});
+                TweenMax.to($(".info"),0.1,{scale:1});
                 check=true;
                 mailout();
                 TweenMax.to($(".info"),0.3,{y:"-=100",opacity:0});
@@ -151,15 +162,22 @@ class Services extends React.Component {
             $("#mailitem").css("display","none");
             $("#mediaitem").css("display","none");
             $(".grid-container3").css("grid-template-columns","auto auto");
+            $(".grid-container3").css("grid-column-gap","0vw");
+            $(".grid-container3").css("margin-top","22%");
             $(".grid-container3").append("<div class='info'><a id='close'></a><h1><hr style='margin-left:10%;margin-top:15%'></h1><h3>Sleek, Beautiful Design</h3><h3>For Desktop, Android, iOS</h3><h3>Customized Design for Each Client</h3><h3>Multiple Languages & Currencies</h3><h3>eCommerce Support</h3><h3>Open Code for Easy Editing</h3><h1>$1500/hour</h1><hr></div>")
             $("#phoneitem").css("background-color","#F3C8D7");
             $(".info").css("background-color","#F3C8D7");
             TweenMax.to($("#phoneitem"),0.3,{opacity:1,y:"+=200"});
+            TweenMax.to($(".grid-item3"),0.1,{scale:0.9});
+            TweenMax.to($(".info"),0.1,{scale:0.9});
+
             TweenMax.to($(".info"),0.1,{x:"-=10"});
             TweenMax.to($(".info"),0.1,{y:"-=100"});
             TweenMax.to($(".info"),0.1,{y:"+=100",opacity:1,delay:0.2});
             TweenMax.staggerTo($(".info h3"),0.3,{delay:0.2,opacity:1,x:"+=10"},0.2);
             $("#close").click(function(){
+                TweenMax.to($(".grid-item3"),0.1,{scale:1});
+                TweenMax.to($(".info"),0.1,{scale:1});
                 check=true;
                 phoneout();
                 TweenMax.to($(".info"),0.3,{y:"-=100",opacity:0});
@@ -173,15 +191,21 @@ class Services extends React.Component {
             $("#mailitem").css("display","none");
             $("#phoneitem").css("display","none");
             $(".grid-container3").css("grid-template-columns","auto auto");
+            $(".grid-container3").css("grid-column-gap","0vw");
+
             $(".grid-container3").append("<div class='info'><a id='close'></a><h1><hr style='margin-left:10%;margin-top:15%'></h1><h3>Professional Video Equipment</h3><h3>Final Cut Editing</h3><h3>Choreography & Design</h3><h3>Youtube Marketing</h3><h3>Posters, Flyers, Logos\n</h3><h3>Free Consultations</h3><h1>$4000/hour</h1><hr></div>")
             $("#mediaitem").css("background-color","#F3C8D7");
             $(".info").css("background-color","#F3C8D7");
             TweenMax.to($("#mediaitem"),0.3,{opacity:1,y:"+=200"});
+            TweenMax.to($(".grid-item3"),0.1,{scale:0.95});
+            TweenMax.to($(".info"),0.1,{scale:0.95});
             TweenMax.to($(".info"),0.1,{x:"-=10"});
             TweenMax.to($(".info"),0.1,{y:"-=100"});
             TweenMax.to($(".info"),0.1,{y:"+=100",opacity:1,delay:0.2});
             TweenMax.staggerTo($(".info h3"),0.3,{delay:0.2,opacity:1,x:"+=10"},0.2);
             $("#close").click(function(){
+                TweenMax.to($(".grid-item3"),0.1,{scale:1});
+                TweenMax.to($(".info"),0.1,{scale:1});
                 check=true;
                 camout();
                 TweenMax.to($(".info"),0.3,{y:"-=100",opacity:0});
@@ -225,6 +249,7 @@ class Services extends React.Component {
     render(){
         return (
             <MuiThemeProvider theme={theme}>
+                <div class="centered3">
                 <div className="grid-container3">
                     <div className="grid-item3" id="mailitem">
                         <svg id="mailsvg" xmlns="http://www.w3.org/2000/svg" xmnlsXlink="http://www.w3.org/1999/xlink"
@@ -309,7 +334,13 @@ class Services extends React.Component {
 
                     </div>
                 </div>
+                </div>
 
+                <SwipeableViews className="swiper" enableMouseEvents>
+                    <div><img src={require("./marketing.png")}/></div>
+                    <div><img src={require("./phone.png")}/></div>
+                    <div><img src={require("./media.png")}/></div>
+                </SwipeableViews>
             </MuiThemeProvider>
         );}
 }

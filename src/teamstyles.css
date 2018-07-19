@@ -22,7 +22,7 @@
 
 }
 
-.grid-container32{
+.grid-container2{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -39,7 +39,7 @@
     grid-template-rows: auto auto auto;
 
 }
-.grid-container32 img{
+.grid-container2 img{
     width:15vw;
     height:15vw;
 }
