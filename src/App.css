@@ -326,6 +326,10 @@ ul{
 and (min-device-width: 320px)
 and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2) {
+  .menu{
+    transform:scale(0.9);
+
+  }
   .menu li {
     width: 10%;
     padding: 1%;
@@ -353,9 +357,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .magario-logo {
-    width: 5em;
-    margin-top: 20px;
-    margin-left: 20px;
+    width: 4em;
+    margin-top: 5px;
+    margin-left: 0px;
   }
   .menu li:first-child {
     border-left: none;
@@ -366,8 +370,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .menu-navigation-round{
-    margin-top:50px;
-    margin-left:25px;
+    margin-top:35px;
+    margin-left:20px;
   }
   .menu-navigation-round a {
 
