@@ -79,8 +79,9 @@
         display:none;
     }
     .swiper{
+        position:fixed;
         display:block;
-        margin-left:-58%;
-        margin-top:10%
+        margin-left:-70%;
+        margin-top:-60%;
     }
 }

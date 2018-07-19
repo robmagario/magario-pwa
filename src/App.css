@@ -43,9 +43,10 @@ body {
 .fab {
   margin: 0px;
   top: auto;
-  right: 20px;
+  right: 10px;
   bottom: 20px;
   position: fixed;
+
 
 }
 
@@ -328,6 +329,12 @@ ul{
     border-left: 1px solid #fff;
     border-right: 1px solid #333;
   }
+  .fab{
+    right:-8px;
+    bottom:0px;
+  }
+
+
   .centered2 {
    margin-top:-18%;
       margin-left:-11%;
