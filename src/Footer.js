@@ -29,7 +29,9 @@ const styles = theme => ({
         bottom: 20,
         left: 'auto',
         position: 'fixed',
+        backgroundColor: '#ffffff',
     },
+
     fab_buttons: {
     position: 'absolute',
     left: 0,
@@ -42,19 +44,19 @@ const styles = theme => ({
     visibility: 'hidden',
     transition: 0.2,
 },
-
-
+    
 });
 
 
 function  Footer(props) {
-    //const { classes } = props;
+    const { classes } = props;
     return (
 
 
-            <MuiThemeProvider theme={theme}>
+
                 <div className="fab">
-                    <Button elevation={2} color="primary" aria-label="add" className="fab"><Info style={{width:'40',height:'40'}}/>
+                    <Button elevation={2} color="primary" aria-label="add" className="classes.fab"><Info style={{backgroundColor: 'white',
+                        borderRadius: '50%', width:'40', height:'40',}}/>
                     </Button>
 
 
@@ -73,7 +75,7 @@ function  Footer(props) {
                     </ul>
                 </div>
 
-            </MuiThemeProvider>
+
 
 );
 
