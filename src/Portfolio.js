@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import './portfoliostyles.css';
+
 import * as $ from 'jquery';
 import {TweenMax, Power2, Elastic} from "gsap";
 
@@ -78,8 +79,6 @@ class Portfolio extends React.Component {
                 <div class="centered2">
                 <div id="slider2">
                     <div className="slides2">
-
-
                         <div className="slider2">
                             <div className="legend"></div>
                             <div className="content">
