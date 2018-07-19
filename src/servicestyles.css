@@ -82,11 +82,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
         display:none;
     }
     .swiper{
-        transform:scale(0.9);
         position:fixed;
         display:block;
-        margin-left:-90%;
-        margin-top:-75%;
+        margin-left:-75%;
+        margin-top:-65%;
     }
 }
 
