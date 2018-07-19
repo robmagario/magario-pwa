@@ -2,7 +2,7 @@ import React from "react";
 import Typography from '@material-ui/core/Typography';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import './teamstyles.css';
+import './portfoliostyles.css';
 import * as $ from 'jquery';
 import {TweenMax, Power2, Elastic} from "gsap";
 
@@ -75,32 +75,67 @@ class Portfolio extends React.Component {
     render(){
         return (
             <MuiThemeProvider theme={theme}>
-                <div className="centered" style={{position:"absolute"}}>
-                    <h1 id="titleText2" style={{display:"none"}}>PORTFOLIO</h1>
+                <div class="centered2">
+                <div id="slider2">
+                    <div className="slides2">
+
+
+                        <div className="slider2">
+                            <div className="legend"></div>
+                            <div className="content">
+                                <div className="content-txt">
+                                    <h1> Your title </h1>
+                                    <h2> Your description </h2>
+                                </div>
+                            </div>
+                            <div className="images">
+                                <img src={require("./portfolio/1.jpg")}/>
+                            </div>
+                        </div>
+
+                        <div className="slider2">
+                            <div className="legend"></div>
+                            <div className="content">
+                                <div className="content-txt">
+                                    <h1> Your title </h1>
+                                    <h2> Your description </h2>
+                                </div>
+                            </div>
+                            <div className="images">
+                                <img src={require("./portfolio/2.jpg")}/>
+                            </div>
+                        </div>
+
+
+                        <div className="slider2">
+                            <div className="legend"></div>
+                            <div className="content">
+                                <div className="content-txt">
+                                    <h1> Your title </h1>
+                                    <h2> Your description </h2>
+                                </div>
+                            </div>
+                            <div className="images">
+                                <img src={require("./portfolio/3.jpg")}/>
+                            </div>
+                        </div>
+
+                        <div className="slider2">
+                            <div className="legend"></div>
+                            <div className="content">
+                                <div className="content-txt">
+                                    <h1> Your title </h1>
+                                    <h2> Your description </h2>
+                                </div>
+                            </div>
+                            <div className="images">
+                                <img src={require("./portfolio/4.jpg")}/>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-
-                <div className="grid-container2" style={{marginTop:"5vw",display:"none"}}>
-                    <div className="grid-item">
-                        <div><img src={require('./portfolio/1.jpg')} /></div>
-                    </div>
-                    <div className="grid-item">
-                        <div><img src={require('./portfolio/2.jpg')} /></div>
-                    </div>
-                    <div className="grid-item">
-                        <div><img src={require('./portfolio/3.jpg')} /></div>
-                    </div>
-                    <div className="grid-item">
-                        <div><img src={require('./portfolio/4.jpg')} /></div>
-                    </div>
-                    <div className="grid-item">
-                        <div><img src={require('./portfolio/5.jpg')} /></div>
-                    </div>
-                    <div className="grid-item">
-                        <div><img src={require('./portfolio/6.jpg')} /></div>
-                    </div>
-
                 </div>
-
             </MuiThemeProvider>
         );}
 }

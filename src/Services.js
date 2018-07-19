@@ -249,7 +249,7 @@ class Services extends React.Component {
     render(){
         return (
             <MuiThemeProvider theme={theme}>
-                <div class="centered5">
+                <div class="centered5 ">
                 <div className="grid-container3">
                     <div className="grid-item3" id="mailitem">
                         <svg id="mailsvg" xmlns="http://www.w3.org/2000/svg" xmnlsXlink="http://www.w3.org/1999/xlink"
