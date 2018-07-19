@@ -82,14 +82,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
         display:none;
     }
     .swiper{
-        transform: scale(0.8);
         position: fixed;
         top: 50%;
         left: 50%;
         /* bring your own prefixes */
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(0.8);
         display: inline-block;
-        margin-top:0;
+        margin-top:5%;
         margin-left:0;
 
     }
@@ -110,7 +109,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         /* bring your own prefixes */
         transform: translate(-50%, -50%);
         display: inline-block;
-        margin-top:0;
+        margin-top:7%;
         margin-left:0;
     }
 }
