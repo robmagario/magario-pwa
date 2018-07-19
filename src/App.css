@@ -199,6 +199,15 @@ body {
   /* bring your own prefixes */
   transform: translate(, -50%);
 }
+.centered3{
+
+  position: absolute;
+  top: 150px;
+  left: 5%;
+  right: 5%;
+  /* bring your own prefixes */
+  transform: translate(, -50%);
+}
 #titleText{
   display:inline-block;
   font-weight: 900;
@@ -208,6 +217,7 @@ body {
 }
 #subtext{
   color: #61605e;
+
 }
 ul li{
   display: inline;
@@ -245,6 +255,10 @@ ul{
 
 .magario-logo {
   width: 10vw;
+}
+
+.menu1 {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .menu-navigation-round a.selected {
@@ -285,6 +299,24 @@ ul{
   height:15vw;
 }
 
+.content-row {
+  margin-top: 30px;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.text-center {
+  text-align: center;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.text-center {
+  text-align: center;
+}
 
 /* Mobile View */
 

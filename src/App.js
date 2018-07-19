@@ -10,6 +10,7 @@ import 'typeface-roboto';
 import {createMuiTheme} from "@material-ui/core/styles/index";
 import Grid from '@material-ui/core/Grid';
 
+
 class App extends Component {
 
     render() {
@@ -19,7 +20,7 @@ class App extends Component {
                 <div className="menu centered2" >
                     <div>
 
-                        <img alt='Magario Logo' src={require('./logo.png')} className="magario-logo"/>
+                        <a href="/"><img alt='Magario Logo' src={require('./logo.png')} className="magario-logo"/></a>
 
                     </div>
                     <div>
