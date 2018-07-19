@@ -324,6 +324,68 @@ ul{
 
 @media only screen
 and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .menu li {
+    width: 10%;
+    padding: 1%;
+    margin: 0;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #333;
+  }
+  .fab{
+    right:-8px;
+    bottom:0px;
+  }
+
+
+  .centered2 {
+    margin-top:-18%;
+    margin-left:-11%;
+    position: absolute;
+  }
+  .menu {
+    align-items: unset;
+  }
+  ul{
+    margin-top:88vw;
+    padding-left: 0px;
+  }
+
+  .magario-logo {
+    width: 5em;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .menu li:first-child {
+    border-left: none;
+  }
+
+  .menu li:last-child {
+    border-right: none;
+  }
+
+  .menu-navigation-round{
+    margin-top:50px;
+    margin-left:25px;
+  }
+  .menu-navigation-round a {
+
+    margin: 8px ;
+    padding: 0 0 0.2em 0;
+    line-height: 1.1em;
+    text-align: center;
+    height: 3.8em;
+    font-size:0.8em;
+  }
+  .grid-container img{
+    width:30vw;
+    height:30vw;
+  }
+}
+
+@media only screen
+and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .menu li {
