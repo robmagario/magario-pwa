@@ -1,0 +1,44 @@
+.form{width:600px;height:400px;background:#FFE092;border-radius:8px;box-shadow:0 0 40px -10px #000;margin-top:20%;padding:20px 30px;max-width:calc(100vw - 40px);box-sizing:border-box;font-family:'Montserrat',sans-serif;position:relative}
+#hi{color:#B28109;border:3px solid #B28109; text-align: center}
+input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #F8C443}
+input:focus{border-bottom:2px solid #B28109}
+#det:before{content:attr(type);display:block;margin:28px 0 0;font-size:14px;color:#B28109;}
+#but{float:right;padding:8px 12px;margin:8px 0 0;font-family:'Montserrat',sans-serif;border:2px solid #B28109;background:0;color:#B28109;cursor:pointer;transition:all .3s}
+#but:hover{background:#B28109;color:#fff}
+#box{position:absolute;bottom:-15px;background:#B28109;color:#fff;width:320px;padding:16px 4px 16px 0;border-radius:6px;font-size:13px;box-shadow:10px 10px 40px -14px #000}
+#spanner{margin:0 5px 0 15px}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .form{
+        margin-top:0%;
+    }
+    #box{
+        padding:10px;
+        left:0px;
+        width:260px;
+        bottom:-40px;
+    }
+
+}
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+   .form{
+       margin-top:-10%;
+
+   }
+    #box{
+        padding:10px;
+        left:0px;
+        text-align:center;
+        bottom:-60px;
+        width:320px;
+
+    }
+}
+
+

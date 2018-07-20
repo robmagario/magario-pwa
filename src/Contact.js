@@ -1,65 +1,37 @@
 import React, { Component } from "react";
 
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import './contactstyles.css';
+import {TweenMax, Elastic} from "gsap";
 
-import Grid from '@material-ui/core/Grid';
-
-
-
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
-});
 
 
 
 class Contact extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            inputvalue: "",
 
-        }
+    componentDidMount(){
+            TweenMax.from(".form",2,{scale:0.5, opacity:0,delay:0.7, ease:Elastic.easeOut})
     }
-
-
-    handleSubmit (event) {
-        console.log('Form value: ' + this.state.inputvalue);
-        event.preventDefault();
-    }
-
-    handleChange (event) {
-        this.setState({
-            inputvalue: event.target.value
-        })
-    }
-
     render() {
         return (
-            <Grid container spacing={24}>
-                <Grid item xs={12}>
-            <form onSubmit={this.handleSubmit.bind(this)}>
-                <label>Name</label>
-                <input type="text" value={this.state.inputvalue} onChange={this.handleChange.bind(this)}/>
-                <input type="submit" value="Submit"/>
-            </form>
-                </Grid>
-
-            </Grid>
-        );
+            <div class="centered5">
+                <form className="form">
+                    <h2 id={"hi"}>CONTACT US</h2>
+                    <p id={"det"} type="Name:"><input placeholder="What's your name?"></input></p>
+                    <p id={"det"} type="Email:"><input placeholder="How can we get back to you?"></input></p>
+                    <p id={"det"} type="Message:"><input placeholder="How can we help?"></input></p>
+                    <button id={"but"}>Send Message</button>
+                    <div id={"box"}>
+                        <span id="spanner"className="fa fa-phone"></span>+852 6818 3401
+                        <span id="spanner" className="fa fa-envelope-o"></span> info@magario.com
+                    </div>
+                </form>
+            </div>
+    );
     }
 }
 
 
-Contact.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
-export default withStyles(styles)(Contact);
+
+export default Contact;
