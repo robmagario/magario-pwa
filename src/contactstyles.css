@@ -1,4 +1,4 @@
-.form{width:600px;height:400px;background:#FFE092;border-radius:8px;box-shadow:0 0 40px -10px #000;margin-top:20%;padding:20px 30px;max-width:calc(100vw - 40px);box-sizing:border-box;font-family:'Montserrat',sans-serif;position:relative}
+.form{text-align:center;width:600px;height:400px;background:#FFE092;border-radius:8px;box-shadow:0 0 40px -10px #000;margin-top:20%;padding:20px 30px;max-width:calc(100vw - 40px);box-sizing:border-box;font-family:'Montserrat',sans-serif;position:relative}
 #hi{color:#B28109;border:3px solid #B28109; text-align: center}
 input{width:100%;padding:10px;box-sizing:border-box;background:none;outline:none;resize:none;border:0;font-family:'Montserrat',sans-serif;transition:all .3s;border-bottom:2px solid #F8C443}
 input:focus{border-bottom:2px solid #B28109}
@@ -7,7 +7,14 @@ input:focus{border-bottom:2px solid #B28109}
 #but:hover{background:#B28109;color:#fff}
 #box{position:absolute;bottom:-15px;background:#B28109;color:#fff;width:320px;padding:16px 4px 16px 0;border-radius:6px;font-size:13px;box-shadow:10px 10px 40px -14px #000}
 #spanner{margin:0 5px 0 15px}
-
+.form h3{
+    text-align:center;
+    color:#B28109;
+}
+.form img{
+    height:55%;
+    width:90%;
+}
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 568px)
@@ -21,6 +28,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width:260px;
         bottom:-40px;
     }
+    .form img{
+        width:100%;
+        height:50%;
+    }
+
 
 }
 @media only screen

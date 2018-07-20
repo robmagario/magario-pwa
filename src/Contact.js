@@ -20,10 +20,8 @@ class Contact extends Component {
             <div class="centered5">
                 <form className="form">
                     <h2 id={"hi"}>CONTACT US</h2>
-                    <p id={"det"} type="Name:"><input placeholder="What's your name?"></input></p>
-                    <p id={"det"} type="Email:"><input placeholder="How can we get back to you?"></input></p>
-                    <p id={"det"} type="Message:"><input placeholder="How can we help?"></input></p>
-                    <button onClick={sendmail} id={"but"}>Send Message</button>
+                    <img src={require("./map.png")}/>
+                    <h3>2F, Kerry Hotel 紅磡湾, 38 Hung Luen Rd, Hung Hom</h3>
                     <div id={"box"}>
                         <span id="spanner"className="fa fa-phone"></span>+852 6818 3401
                         <span id="spanner" className="fa fa-envelope-o"></span> info@magario.com
