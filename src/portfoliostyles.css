@@ -327,9 +327,34 @@
         margin-left:45px;
     }
 }
-
 @media only screen
 and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .slider2 {
+        margin-top:5%;
+    }
+    .images img{
+        width:90%;
+        height:100%
+    }
+    .content-txt h1 {
+        padding-bottom: 0;
+    }
+    .content-txt h2 {
+        width: 35%;
+        height: 100%;
+        left: 5%;
+
+    }
+    .content-txt h3 {
+        display: none;
+
+    }
+}
+
+@media only screen
+and (min-device-width: 375px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2) {
     .slider2 {
