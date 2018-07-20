@@ -11,6 +11,9 @@ import {createMuiTheme} from "@material-ui/core/styles/index";
 import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
 import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 
 const styles = theme => ({
     close: {
@@ -31,6 +34,7 @@ window.addEventListener('beforeinstallprompt', function (e) {
 
 });
 
+/*
 btnAdd.addEventListener('click', (e) => {
     // hide our user interface that shows our A2HS button
     btnAdd.style.display = 'none';
@@ -48,7 +52,7 @@ btnAdd.addEventListener('click', (e) => {
         });
 });
 
-
+*/
 class App extends Component {
 
     state = {
