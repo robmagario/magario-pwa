@@ -95,10 +95,11 @@ class Portfolio extends React.Component {
                                 <div className="content-txt">
                                     <h1>Ludwig Donnert</h1>
                                     <h2>After moving to a new office without any form of network, Magario
-                                        arrived within a day and set up the entire network. In addition to
+                                        arrived within a day and set up the entire network. </h2>
+                                    <h3>In addition to
                                         setting up the computers and printers on the network, they also fixed
                                         our website. Everything was done within 1 hour. A big thank you to
-                                        Magario.</h2>
+                                        Magario.</h3>
                                 </div>
                             </div>
                             <div className="images">
@@ -112,7 +113,9 @@ class Portfolio extends React.Component {
                             <div className="content">
                                 <div className="content-txt">
                                     <h1>Javed Rasool</h1>
-                                    <h2>During this time we have seen significant improvement in our organic rankings including a move from the 10th page to the 1st page position for our primary target “salsa classes hong kong”.</h2>
+                                    <h2>It has been a pleasure working with Magario over the past several years. </h2>
+                                    <h3>During this time we have seen significant improvement in our organic rankings
+                                        including a move from the 10th page to the 1st page position for our primary target “salsa classes hong kong”.</h3>
                                 </div>
                             </div>
                             <div className="images">

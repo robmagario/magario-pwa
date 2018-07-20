@@ -85,6 +85,15 @@
     text-align:left;
     margin-left:30px;
 }
+.content-txt h3{
+    font-family:arial;
+    font-weight:normal;
+    font-size:14px;
+    font-style:italic;
+    color:#fff;
+    text-align:left;
+    margin-left:30px;
+}
 
 /* Switch */
 .switch{
@@ -320,15 +329,23 @@
 }
 
 @media only screen
-and (min-device-width: 375px)
+and (min-device-width: 320px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2) {
     .slider2 {
         margin-top:5%;
     }
+    .content-txt h1 {
+        padding-bottom: 0;
+    }
     .content-txt h2 {
-        width: 80%;
+        width: 40%;
         height: 100%;
-        position: fixed;
+        left: 5%;
+
+    }
+    .content-txt h3 {
+        display: none;
+
     }
 }
