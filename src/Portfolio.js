@@ -115,9 +115,9 @@ class Portfolio extends React.Component {
                                     <h2>During this time we have seen significant improvement in our organic rankings including a move from the 10th page to the 1st page position for our primary target “salsa classes hong kong”.</h2>
                                 </div>
                             </div>
-                            <a href="google.com"><div className="images">
+                            <div className="images">
                                 <a href="http://dancewithstylehk.com"><img src={require("./portfolio/javed_rasool.jpg")}/></a>
-                            </div></a>
+                            </div>
                         </div>
 
                         <div className="slider2">
