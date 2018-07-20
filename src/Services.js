@@ -334,13 +334,14 @@ class Services extends React.Component {
 
                     </div>
                 </div>
+                    <SwipeableViews className="swiper" enableMouseEvents>
+                        <div><img src={require("./marketing.png")}/></div>
+                        <div><img src={require("./phone.png")}/></div>
+                        <div><img src={require("./media.png")}/></div>
+                    </SwipeableViews>
                 </div>
 
-                <SwipeableViews className="swiper" enableMouseEvents>
-                    <div><img src={require("./marketing.png")}/></div>
-                    <div><img src={require("./phone.png")}/></div>
-                    <div><img src={require("./media.png")}/></div>
-                </SwipeableViews>
+
             </MuiThemeProvider>
         );}
 }

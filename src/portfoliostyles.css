@@ -121,7 +121,7 @@
 }
 
 /* Animation */
-@-webkit-keyframes slide{
+@-webkit-keyframes  slide{
     0%,100%{
         margin-left:0%;
     }

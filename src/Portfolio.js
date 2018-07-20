@@ -58,13 +58,7 @@ class Portfolio extends React.Component {
                 "color":"#61605"
         }
         );
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-            TweenMax.to($(".grid-container2"),1,{display:"inline-grid"});
 
-            $(".detailgriditem2").css("width","70vw");
-            TweenMax.staggerFrom($(".grid-item"), 5, {scale:0.5, opacity:0, ease:Elastic.easeOut, force3D:true}, 0.5);
-
-        }
         if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
 
             TweenMax.to($(".grid-container2"),1,{display:"inline-grid"});
