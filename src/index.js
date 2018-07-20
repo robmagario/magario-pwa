@@ -22,9 +22,11 @@ window.addEventListener('beforeinstallprompt', function (e) {
     // Stash the event so it can be triggered later.
     deferredPrompt = e;
 
-    showAddToHomeScreen();
+  //  btnAdd.style.display = 'block';
 
 });
+
+
 
 function showAddToHomeScreen() {
 
