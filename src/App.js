@@ -22,41 +22,40 @@ const styles = theme => ({
     },
 });
 
-var deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', function (e) {
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
-
+    e.preventDefault();
+    // Stash the event so it can be triggered later on the button event.
+    deferredPrompt = e;
+// Update UI by showing a button to notify the user they can add to home screen
+   // btn.style.display = 'block';
 });
 
-/*
-btnAdd.addEventListener('click', (e) => {
-    // hide our user interface that shows our A2HS button
-    btnAdd.style.display = 'none';
-    // Show the prompt
-    deferredPrompt.prompt();
-    // Wait for the user to respond to the prompt
-    deferredPrompt.userChoice
-        .then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-                console.log('User accepted the A2HS prompt');
-            } else {
-                console.log('User dismissed the A2HS prompt');
-            }
-            deferredPrompt = null;
-        });
-});
-
-*/
 class App extends Component {
 
     state = {
         open: true,
     };
     handleClick = () => {
-        alert("ello");
-        this.setState({ open: true });
-    };
+        console.log('this is:', this);
+        // btn.style.display = 'none';
+        // Show the prompt
+        deferredPrompt.prompt();
+        // Wait for the user to respond to the prompt
+        deferredPrompt.userChoice
+            .then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the prompt');
+                } else {
+                    console.log('User dismissed the prompt');
+                }
+                deferredPrompt = null;
+            });
+    }
 
     handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -87,8 +86,8 @@ class App extends Component {
                     }}
                     message={<span id="message-id">Note archived</span>}
                     action={[
-                        <Button key="undo" color="secondary" size="small" onClick={this.handleClose}>
-                            UNDO
+                        <Button key="undo" color="secondary" size="small" onClick={this.handleClick}>
+                            INSTALL
                         </Button>,
                         <IconButton
                             key="close"
@@ -116,10 +115,7 @@ class App extends Component {
                             <a href="/about">About</a>
                         </nav>
                     </div>
-
-                    <div>
-
-                    </div>
+                    
                 </div>
                 <Main/>
                 <Footer/>
