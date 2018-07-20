@@ -327,6 +327,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin-top:5%;
     }
     .content-txt h2 {
-        width: 300px; 
+        width: 40%;
     }
 }
