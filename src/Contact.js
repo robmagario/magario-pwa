@@ -13,6 +13,9 @@ class Contact extends Component {
             TweenMax.from(".form",2,{scale:0.5, opacity:0,delay:0.7, ease:Elastic.easeOut})
     }
     render() {
+        function sendmail(){
+
+        }
         return (
             <div class="centered5">
                 <form className="form">
@@ -20,7 +23,7 @@ class Contact extends Component {
                     <p id={"det"} type="Name:"><input placeholder="What's your name?"></input></p>
                     <p id={"det"} type="Email:"><input placeholder="How can we get back to you?"></input></p>
                     <p id={"det"} type="Message:"><input placeholder="How can we help?"></input></p>
-                    <button id={"but"}>Send Message</button>
+                    <button onClick={sendmail} id={"but"}>Send Message</button>
                     <div id={"box"}>
                         <span id="spanner"className="fa fa-phone"></span>+852 6818 3401
                         <span id="spanner" className="fa fa-envelope-o"></span> info@magario.com

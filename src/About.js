@@ -6,7 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import * as $ from 'jquery';
-import {TweenMax, Power2, Elastic} from "gsap";
+import {TweenMax, Power3, Elastic} from "gsap";
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -49,6 +49,8 @@ class About extends React.Component {
             "font-family": 'Ubuntu',
             "color":"#61605"
         });
+        TweenMax.from(".centered3", 1, { opacity: 0, delay: 0.3, ease: Power3.easeOut})
+
     }
     render(){
         const { classes, theme } = this.props;

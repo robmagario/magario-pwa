@@ -26,6 +26,7 @@ const theme = createMuiTheme({
 
 class Home extends React.Component {
     componentDidMount(){
+        TweenMax.from(".centered4", 1.5, { opacity: 0, delay: 0.5, ease: Power2.easeOut})
 
         $('#pg1but').click(function () {
             TweenMax.to($('body'),0.3,{backgroundColor:'#FEC200',ease:Power2.easeIn});

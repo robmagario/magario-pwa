@@ -238,7 +238,9 @@ class Services extends React.Component {
             setTimeout(campage,1000);
 
         });
-
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            TweenMax.from(".swiper", 1, { opacity: 0, delay: 0.3, ease: Power3.easeOut})
+        }
 
 
 
