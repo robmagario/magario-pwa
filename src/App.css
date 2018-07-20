@@ -156,7 +156,6 @@ html, body {
 }
 body {
   font-family: 'Ubuntu', sans-serif;
-  overflow: hidden;
   color:white;
   display: inline-block;
   background-color: #f8c443;
@@ -309,6 +308,8 @@ and (max-device-width: 568px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .menu{
     transform:scale(0.9);
+    position:fixed;
+
 
   }
   .menu li {

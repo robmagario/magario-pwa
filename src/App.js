@@ -16,8 +16,8 @@ class App extends Component {
     render() {
         return (
             <body>
-
-                <div className="menu centered2" >
+    <div  className="centered2">
+                <div className="menu" >
                     <div>
 
                         <a href="/"><img alt='Magario Logo' src={require('./logo.png')} className="magario-logo"/></a>
@@ -36,6 +36,7 @@ class App extends Component {
 
                     </div>
                 </div>
+    </div>
                 <Main/>
                 <Footer/>
 
