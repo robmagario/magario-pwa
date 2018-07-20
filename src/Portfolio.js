@@ -71,6 +71,7 @@ class Portfolio extends React.Component {
             TweenMax.staggerFrom($(".grid-item"), 5, {scale:0.5, opacity:0, ease:Elastic.easeOut, display:"none", force3D:true}, 0.5);
         }
 
+
     }
 
     render(){
@@ -83,12 +84,14 @@ class Portfolio extends React.Component {
                             <div className="legend"></div>
                             <div className="content">
                                 <div className="content-txt">
-                                    <a href="https://www.facebook.com/andrew.willner.54"><h1>Andy Willner</h1></a>
+                                    <h1>Andy Willner</h1>
                                     <h2>Magario assisted me with social media promotion for my yoga business. Thanks a lot. </h2>
                                 </div>
                             </div>
+
                             <div className="images">
-                                <img src={require("./portfolio/andy_willner.jpg")}/>
+                                <a href="https://www.facebook.com/andrew.willner.54">
+                                    <img src={require("./portfolio/andy_willner.jpg")}/></a>
                             </div>
                         </div>
 
@@ -96,7 +99,7 @@ class Portfolio extends React.Component {
                             <div className="legend"></div>
                             <div className="content">
                                 <div className="content-txt">
-                                    <a href="https://www.alphasherpacapital.com/"><h1>Ludwig Donnert</h1></a>
+                                    <h1>Ludwig Donnert</h1>
                                     <h2>After moving to a new office without any form of network, Magario
                                         arrived within a day and set up the entire network. In addition to
                                         setting up the computers and printers on the network, they also fixed
@@ -105,7 +108,7 @@ class Portfolio extends React.Component {
                                 </div>
                             </div>
                             <div className="images">
-                                <img src={require("./portfolio/ludwig_donnert.jpg")}/>
+                                <a href="https://www.alphasherpacapital.com/"><img src={require("./portfolio/ludwig_donnert.jpg")}/></a>
                             </div>
                         </div>
 
@@ -114,12 +117,12 @@ class Portfolio extends React.Component {
                             <div className="legend"></div>
                             <div className="content">
                                 <div className="content-txt">
-                                    <a href="http://dancewithstylehk.com"><h1>Javed Rasool</h1></a>
+                                    <h1>Javed Rasool</h1>
                                     <h2>During this time we have seen significant improvement in our organic rankings including a move from the 10th page to the 1st page position for our primary target “salsa classes hong kong”.</h2>
                                 </div>
                             </div>
                             <a href="google.com"><div className="images">
-                               <img src={require("./portfolio/javed_rasool.jpg")}/>
+                                <a href="http://dancewithstylehk.com"><img src={require("./portfolio/javed_rasool.jpg")}/></a>
                             </div></a>
                         </div>
 
@@ -127,12 +130,12 @@ class Portfolio extends React.Component {
                             <div className="legend"></div>
                             <div className="content">
                                 <div className="content-txt">
-                                    <a href="http://hayashida.com.br/"><h1>Hayashida Acupuntura</h1></a>
+                                    <h1>Hayashida Acupuntura</h1>
                                     <h2>A empresa Magario trabalha atuando em SEO/SEM e também na criação e manutenção do site da clínica. Muito obrigado.</h2>
                                 </div>
                             </div>
                             <div className="images">
-                                <img src={require("./portfolio/hayashida_acupuntura.jpg")}/>
+                                <a href="http://hayashida.com.br/"><img src={require("./portfolio/hayashida_acupuntura.jpg")}/></a>
                             </div>
                         </div>
 
