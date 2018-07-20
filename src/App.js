@@ -30,7 +30,7 @@ window.addEventListener('beforeinstallprompt', function (e) {
     // Stash the event so it can be triggered later.
     deferredPrompt = e;
 
-    this.handleClick;
+    this.handleClick();
 
 });
 
@@ -56,9 +56,10 @@ btnAdd.addEventListener('click', (e) => {
 class App extends Component {
 
     state = {
-        open: false,
+        open: true,
     };
     handleClick = () => {
+        alert("ello");
         this.setState({ open: true });
     };
 
@@ -71,9 +72,9 @@ class App extends Component {
     };
 
 
-
     render() {
         const { classes } = this.props;
+
         return (
             <body>
             <div>
@@ -139,5 +140,5 @@ class App extends Component {
     classes: PropTypes.object.isRequired,
 };
 
-    export default App;
+export default withStyles(styles)(App);
 
