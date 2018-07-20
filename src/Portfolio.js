@@ -88,7 +88,7 @@ class Portfolio extends React.Component {
                                 </div>
                             </div>
                             <div className="images">
-                                <img src={require("./portfolio/1.jpg")}/>
+                                <img src={require("./portfolio/andy_willner.jpg")}/>
                             </div>
                         </div>
 
@@ -96,12 +96,16 @@ class Portfolio extends React.Component {
                             <div className="legend"></div>
                             <div className="content">
                                 <div className="content-txt">
-                                    <h1> Your title </h1>
-                                    <h2> Your description </h2>
+                                    <h1>Ludwig Donnert</h1>
+                                    <h2>After moving to a new office without any form of network, Magario
+                                        arrived within a day and set up the entire network. In addition to
+                                        setting up the computers and printers on the network, they also fixed
+                                        our website. Everything was done within 1 hour. A big thank you to
+                                        Magario.</h2>
                                 </div>
                             </div>
                             <div className="images">
-                                <img src={require("./portfolio/2.jpg")}/>
+                                <img src={require("./portfolio/ludwig_donnert.jpg")}/>
                             </div>
                         </div>
 
