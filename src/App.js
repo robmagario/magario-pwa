@@ -24,38 +24,49 @@ const styles = theme => ({
 
 
 
-let deferredPrompt;
-
+//let deferredPrompt;
+/*
 window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
     e.preventDefault();
     // Stash the event so it can be triggered later on the button event.
     deferredPrompt = e;
 // Update UI by showing a button to notify the user they can add to home screen
-   // btn.style.display = 'block';
+   // Snackbar.defaultProps.open = true;
+    deferredPrompt.prompt();
 });
+*/
 
 class App extends Component {
-
     state = {
-        open: true,
+        open: false,
     };
-    handleClick = () => {
-        console.log('this is:', this);
-        // btn.style.display = 'none';
-        // Show the prompt
-        deferredPrompt.prompt();
-        // Wait for the user to respond to the prompt
-        deferredPrompt.userChoice
-            .then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('User accepted the prompt');
-                } else {
-                    console.log('User dismissed the prompt');
-                }
-                deferredPrompt = null;
-            });
+
+    componentDidMount() {
+        // When the component is mounted, add your DOM listener to the "nv" elem.
+        // (The "nv" elem is assigned in the render function.)
+        //this.nv.addEventListener("nv-enter", this.handleNvEnter);
+        window.addEventListener('beforeinstallprompt',this.handleBeforeInstallPrompt);
     }
+
+    componentWillUnmount() {
+        // Make sure to remove the DOM listener when the component is unmounted.
+       // this.nv.removeEventListener("nv-enter", this.handleNvEnter);
+        window.removeEventListener('beforeinstallprompt',this.handleBeforeInstallPrompt);
+    }
+
+    // Use a class arrow function (ES7) for the handler. In ES6 you could bind()
+    // a handler in the constructor.
+    handleBeforeInstallPrompt = (event) => {
+        console.log("Before Install Prompt Enter:", event);
+        this.setState({ open: true });
+
+    }
+
+
+        handleClick = () => {
+            this.setState({ open: true });
+        };
 
     handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -68,6 +79,7 @@ class App extends Component {
 
     render() {
         const { classes } = this.props;
+       // this.handleClick;
 
         return (
             <body>
@@ -75,7 +87,7 @@ class App extends Component {
 
                 <Snackbar
                     anchorOrigin={{
-                        vertical: 'bottom',
+                        vertical: 'center',
                         horizontal: 'left',
                     }}
                     open={this.state.open}
@@ -84,11 +96,9 @@ class App extends Component {
                     ContentProps={{
                         'aria-describedby': 'message-id',
                     }}
-                    message={<span id="message-id">Note archived</span>}
+                    message={<span id="message-id">Click on blue button on the bottom for installing the app.</span>}
                     action={[
-                        <Button key="undo" color="secondary" size="small" onClick={this.handleClick}>
-                            INSTALL
-                        </Button>,
+
                         <IconButton
                             key="close"
                             aria-label="Close"
@@ -115,7 +125,7 @@ class App extends Component {
                             <a href="/about">About</a>
                         </nav>
                     </div>
-                    
+
                 </div>
                 <Main/>
                 <Footer/>

@@ -16,12 +16,6 @@ document.addEventListener('gesturestart', function (e) {
 //
 
 
-
-
-
-
-
-
 render((
     <React.Fragment>
 
