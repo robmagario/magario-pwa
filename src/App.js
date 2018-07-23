@@ -48,6 +48,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
 class App extends Component {
     state = {
         open: false,
+        iosopen:false,
+
     };
 
     showInstallMessage = false;
@@ -56,6 +58,10 @@ class App extends Component {
         // When the component is mounted, add your DOM listener to the "nv" elem.
         // (The "nv" elem is assigned in the render function.)
         //this.nv.addEventListener("nv-enter", this.handleNvEnter);
+        var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+        if(iOS==true){
+            this.setState({ iosopen: true });
+        }
         window.addEventListener('beforeinstallprompt',this.handleBeforeInstallPrompt);
     }
 
@@ -85,15 +91,15 @@ class App extends Component {
 
         this.setState({ open: false });
     };
+    handleClose2 = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
 
-    iOSInstallable = () => {
+        this.setState({ iosopen: false });
+    };
 
-// Checks if should display install popup notification:
-    if (isIos() && !isInStandaloneMode()) {
-        this.setState({showInstallMessage: true});
 
-    }
-};
 
     render() {
         const { classes } = this.props;
@@ -131,30 +137,28 @@ class App extends Component {
 
                 <Snackbar
                     anchorOrigin={{
-                        vertical: 'center',
-                        horizontal: 'center',
+                        vertical: 'bottom',
+                        horizontal: 'left',
                     }}
-                    open={showInstallMessage}
+                    open={this.state.iosopen}
                     autoHideDuration={6000}
-                    onClose={this.handleClose}
+                    onClose={this.handleClose2}
                     ContentProps={{
                         'aria-describedby': 'message-id',
                     }}
-                    message={<span id="message-id"><AddIcon/> Install this webapp on your iPhone: tap the share button and then Add to homescreen.</span>}
+                    message={<span id="message-id">Install this Webapp on your IOS Device: Tap the share button and then add to homescreen</span>}
                     action={[
-
                         <IconButton
                             key="close"
                             aria-label="Close"
                             color="inherit"
                             className={classes.close}
-                            onClick={this.handleClose}
+                            onClick={this.handleClose2}
                         >
                             <CloseIcon />
                         </IconButton>,
                     ]}
                 />
-
             </div>
                 <div className="menu centered2" >
                     <div>
