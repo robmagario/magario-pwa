@@ -14,6 +14,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
+import AddIcon from '@material-ui/icons/Add';
 
 const styles = theme => ({
     close: {
@@ -22,7 +23,14 @@ const styles = theme => ({
     },
 });
 
+const isIos = () => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
 
+
+    return /iphone|ipad|ipod/.test( userAgent );
+}
+// Detects if device is in standalone mode
+const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
 //let deferredPrompt;
 /*
@@ -41,6 +49,8 @@ class App extends Component {
     state = {
         open: false,
     };
+
+    showInstallMessage = false;
 
     componentDidMount() {
         // When the component is mounted, add your DOM listener to the "nv" elem.
@@ -61,7 +71,7 @@ class App extends Component {
         console.log("Before Install Prompt Enter:", event);
         this.setState({ open: true });
 
-    }
+    };
 
 
         handleClick = () => {
@@ -76,11 +86,19 @@ class App extends Component {
         this.setState({ open: false });
     };
 
+    iOSInstallable = () => {
+
+// Checks if should display install popup notification:
+    if (isIos() && !isInStandaloneMode()) {
+        this.setState({showInstallMessage: true});
+
+    }
+};
 
     render() {
         const { classes } = this.props;
        // this.handleClick;
-
+        const showInstallMessage = this.showInstallMessage;
         return (
             <body>
             <div>
@@ -110,6 +128,33 @@ class App extends Component {
                         </IconButton>,
                     ]}
                 />
+
+                <Snackbar
+                    anchorOrigin={{
+                        vertical: 'center',
+                        horizontal: 'center',
+                    }}
+                    open={showInstallMessage}
+                    autoHideDuration={6000}
+                    onClose={this.handleClose}
+                    ContentProps={{
+                        'aria-describedby': 'message-id',
+                    }}
+                    message={<span id="message-id"><AddIcon/> Install this webapp on your iPhone: tap the share button and then Add to homescreen.</span>}
+                    action={[
+
+                        <IconButton
+                            key="close"
+                            aria-label="Close"
+                            color="inherit"
+                            className={classes.close}
+                            onClick={this.handleClose}
+                        >
+                            <CloseIcon />
+                        </IconButton>,
+                    ]}
+                />
+
             </div>
                 <div className="menu centered2" >
                     <div>
