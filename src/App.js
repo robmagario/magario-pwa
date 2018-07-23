@@ -59,7 +59,7 @@ class App extends Component {
         // (The "nv" elem is assigned in the render function.)
         //this.nv.addEventListener("nv-enter", this.handleNvEnter);
         var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-        if(iOS==true){
+        if(iOS==true&&!isInStandaloneMode()){
             this.setState({ iosopen: true });
         }
         window.addEventListener('beforeinstallprompt',this.handleBeforeInstallPrompt);
