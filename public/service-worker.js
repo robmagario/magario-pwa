@@ -2,10 +2,9 @@
 var doCache = true;
 var CACHE_NAME = 'my-pwa-cache-v1';
 var urlsToCache = [
-    '/',
+    '/index.html',
     '/src/App.css',
     '/about',
-    '/services',
     '/contact',
     '/portfolio',
 ];
