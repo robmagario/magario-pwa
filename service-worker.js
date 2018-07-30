@@ -13,7 +13,6 @@ self.addEventListener('install', function(event) {
         caches.open(CACHE_NAME)
             .then(function(cache) {
                 // Open a cache and cache our files
-                console.log('hello');
                 return cache.addAll(urlsToCache);
             })
     );
