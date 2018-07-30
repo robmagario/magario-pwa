@@ -4,7 +4,10 @@ var CACHE_NAME = 'my-pwa-cache-v1';
 var urlsToCache = [
     '/',
     '/src/App.css',
-    '/About'
+    '/about',
+    '/services',
+    '/contact',
+    '/portfolio',
 ];
 self.addEventListener('install', function(event) {
     event.waitUntil(
