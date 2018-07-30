@@ -6,7 +6,7 @@ import About from './About';
 import Contact from './Contact'
 import Portfolio from './Portfolio'
 import Services from './Services'
-import {TweenMax, Power2} from "gsap";
+
 
 
 const Main = () => (

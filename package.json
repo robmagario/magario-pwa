@@ -25,6 +25,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "webpack-manifest-plugin": "^2.0.3"
+    "webpack-manifest-plugin": "^2.0.3",
+    "workbox-webpack-plugin": "^3.4.1"
   }
 }

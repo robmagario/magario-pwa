@@ -1,13 +1,7 @@
 import React from "react";
-import Typography from '@material-ui/core/Typography';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import './portfoliostyles.css';
-
 import * as $ from 'jquery';
-import {TweenMax, Power2, Elastic} from "gsap";
-
-import Grid from '@material-ui/core/Grid';
+import {TweenMax, Elastic} from "gsap";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -31,24 +25,6 @@ const theme = createMuiTheme({
 });
 
 
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        backgroundColor: "#f8c443",
-
-    },
-    typography: {
-        fontFamily: 'Alegreya Sans SC',
-        fontSize: '3rem',
-        color: '#605F5F'
-    },
-
-});
 
 class Portfolio extends React.Component {
     componentDidMount(){
@@ -85,7 +61,7 @@ class Portfolio extends React.Component {
 
                             <div className="images">
                                 <a href="https://www.facebook.com/andrew.willner.54">
-                                    <img src={require("./portfolio/andy_willner.jpg")}/></a>
+                                    <img src={require("./portfolio/andy_willner.jpg")} alt={"Andy Willner"}/></a>
                             </div>
                         </div>
 
@@ -103,7 +79,7 @@ class Portfolio extends React.Component {
                                 </div>
                             </div>
                             <div className="images">
-                                <a href="https://www.alphasherpacapital.com/"><img src={require("./portfolio/ludwig_donnert.jpg")}/></a>
+                                <a href="https://www.alphasherpacapital.com/"><img src={require("./portfolio/ludwig_donnert.jpg")} alt={"Ludwig Donnert"}/></a>
                             </div>
                         </div>
 
@@ -119,7 +95,7 @@ class Portfolio extends React.Component {
                                 </div>
                             </div>
                             <div className="images">
-                                <a href="http://dancewithstylehk.com"><img src={require("./portfolio/javed_rasool.jpg")}/></a>
+                                <a href="http://dancewithstylehk.com"><img src={require("./portfolio/javed_rasool.jpg")} alt={"Javed Rasool"}/></a>
                             </div>
                         </div>
 
@@ -132,7 +108,7 @@ class Portfolio extends React.Component {
                                 </div>
                             </div>
                             <div className="images">
-                                <a href="http://hayashida.com.br/"><img src={require("./portfolio/hayashida_acupuntura.jpg")}/></a>
+                                <a href="http://hayashida.com.br/"><img src={require("./portfolio/hayashida_acupuntura.jpg")} alt={"Hayashida"}/></a>
                             </div>
                         </div>
 

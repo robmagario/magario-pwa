@@ -1,13 +1,8 @@
 import React from "react";
 import SwipeableViews from 'react-swipeable-views';
-import Typography from '@material-ui/core/Typography';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import './servicestyles.css';
 import * as $ from 'jquery';
-import {TweenMax, Power2, Elastic, RoughEase,Linear, Power3} from "gsap";
-
-import Grid from '@material-ui/core/Grid';
+import {TweenMax, Elastic, Power3} from "gsap";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -31,24 +26,6 @@ const theme = createMuiTheme({
 });
 
 
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        backgroundColor: "#f8c443",
-
-    },
-    typography: {
-        fontFamily: 'Alegreya Sans SC',
-        fontSize: '3rem',
-        color: '#605F5F'
-    },
-
-});
 
 class Services extends React.Component {
     componentDidMount() {
@@ -68,9 +45,7 @@ class Services extends React.Component {
         TweenMax.to($(".cam1"),0.1,{scale:0.5});
         TweenMax.to($(".cam"),0.1,{scale:0.5});
 
-        function shake(){
-            TweenMax.fromTo($('#phonesvg'), 0.3, {x:-1}, {x:1, ease:RoughEase.ease.config({strength:8, points:20, template:Linear.easeNone, randomize:false}) , clearProps:"x"});
-        }
+
         function mailin() {
             if (check) {
                 TweenMax.to($('#flap'), 0.3, {y: "-40%", opacity: 0, ease: Power3.easeIn,});
@@ -337,9 +312,9 @@ class Services extends React.Component {
                     </div>
                 </div>
                     <SwipeableViews className="swiper" enableMouseEvents>
-                        <div><img src={require("./marketing.png")}/></div>
-                        <div><img src={require("./phone.png")}/></div>
-                        <div><img src={require("./media.png")}/></div>
+                        <div><img src={require("./marketing.png")} alt={"Marketing"}/></div>
+                        <div><img src={require("./phone.png")} alt={"Phone"}/></div>
+                        <div><img src={require("./media.png")} alt={"Media"}/></div>
                     </SwipeableViews>
                 </div>
 

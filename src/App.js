@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import Main from './Main';
 import Footer from './Footer';
 import 'typeface-roboto';
-import {createMuiTheme} from "@material-ui/core/styles/index";
-import Grid from '@material-ui/core/Grid';
 import Snackbar from '@material-ui/core/Snackbar';
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-import AddIcon from '@material-ui/icons/Add';
 
 const styles = theme => ({
     close: {
@@ -23,12 +16,6 @@ const styles = theme => ({
     },
 });
 
-const isIos = () => {
-    const userAgent = window.navigator.userAgent.toLowerCase();
-
-
-    return /iphone|ipad|ipod/.test( userAgent );
-}
 // Detects if device is in standalone mode
 const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
 
@@ -59,7 +46,7 @@ class App extends Component {
         // (The "nv" elem is assigned in the render function.)
         //this.nv.addEventListener("nv-enter", this.handleNvEnter);
         var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-        if(iOS==true&&!isInStandaloneMode()){
+        if(iOS===true&&!isInStandaloneMode()){
             this.setState({ iosopen: true });
         }
         window.addEventListener('beforeinstallprompt',this.handleBeforeInstallPrompt);
@@ -106,7 +93,7 @@ class App extends Component {
        // this.handleClick;
         const showInstallMessage = this.showInstallMessage;
         return (
-            <body>
+<body>
             <div>
 
                 <Snackbar
@@ -178,8 +165,8 @@ class App extends Component {
                 </div>
                 <Main/>
                 <Footer/>
+</body>
 
-            </body>
         );
     }
 

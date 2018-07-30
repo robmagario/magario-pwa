@@ -17,6 +17,7 @@ document.addEventListener('gesturestart', function (e) {
 
 
 render((
+
     <React.Fragment>
 
     <MuiThemeProvider theme={theme}>
@@ -24,7 +25,9 @@ render((
         <App />
     </BrowserRouter>
     </MuiThemeProvider>
+
     </React.Fragment>
+
 ),
 
     document.getElementById('root'));

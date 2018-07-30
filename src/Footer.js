@@ -1,20 +1,9 @@
 import React from "react";
-
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Info from '@material-ui/icons/Info';
 import PermMedia from '@material-ui/icons/PermMedia';
-import blue from '@material-ui/core/colors/blue';
-
-
-const theme = createMuiTheme({
-    palette: {
-        primary: blue,
-    },
-});
 
 
 const styles = theme => ({
@@ -60,7 +49,7 @@ class Footer extends React.Component {
         })
     }
     render() {
-        const { classes, theme } = this.props;
+
         return (
 
 

@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-
-import PropTypes from 'prop-types';
 import './contactstyles.css';
 import {TweenMax, Elastic} from "gsap";
-
-
-
 
 class Contact extends Component {
 
@@ -20,7 +15,7 @@ class Contact extends Component {
             <div class="centered5">
                 <form className="form">
                     <h2 id={"hi"}>CONTACT US</h2>
-                    <img src={require("./map.png")}/>
+                    <img src={require("./map.png")} alt={"Map"}/>
                     <h3>2F, Kerry Hotel 紅磡湾, 38 Hung Luen Rd, Hung Hom</h3>
                     <div id={"box"}>
                         <span id="spanner"className="fa fa-phone"></span>+852 6818 3401
