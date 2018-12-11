@@ -73,7 +73,7 @@ class Home extends React.Component {
                 <div className="centered4" align="center" style={{display: "inline-block"}}>
                     <div className="menu1">
                         <h1 id="titleText">WEBSITES</h1>
-                        <h2 id="subtext">WEB DESIGN AND E-MARKETING SPECIALISTS</h2>
+                        <h2 id="subtext">WEB DESIGN AND DIGITAL MARKETING SPECIALISTS</h2>
                     </div>
                     <div className="menu2" style={{display: "none", opacity:0}}>
                         <h1 id="titleText">SERVERS</h1>

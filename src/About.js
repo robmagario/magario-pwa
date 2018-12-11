@@ -67,16 +67,15 @@ class About extends React.Component {
                         INTERNATIONAL
                     </Typography>
                     <Typography component="p">
-                        International staff to meet the needs of an international clientele. Multilingual services, multi-currency websites.
+                        International team to meet the needs of an international clientele. Multilingual services, multi-currency websites.
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" color="primary">
-                        Share
-                    </Button>
+                    <a href="/team" >
                     <Button size="small" color="primary">
                         Learn More
                     </Button>
+                    </a>
                 </CardActions>
             </Card>
                 </Grid>

@@ -6,6 +6,7 @@ import About from './About';
 import Contact from './Contact'
 import Portfolio from './Portfolio'
 import Services from './Services'
+import Team from './Team'
 import NoMatch from './NoMatch'
 
 
@@ -18,6 +19,7 @@ const Main = () => (
             <Route path='/services' component ={Services}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/portfolio' component={Portfolio}/>
+            <Route path='/team' component={Team}/>
             <Route component={NoMatch} />
         </Switch>
     </main>
