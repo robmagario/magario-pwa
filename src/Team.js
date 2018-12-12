@@ -93,7 +93,7 @@ class Team extends React.Component {
                         TODD KATSUYAMA
                     </Typography>
                     <Typography component="p">
-                      Business development advisor
+                      Business Development Advisor
                     </Typography>
                 </CardContent>
                 <CardActions>
